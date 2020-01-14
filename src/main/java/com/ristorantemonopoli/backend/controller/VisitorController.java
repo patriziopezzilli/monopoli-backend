@@ -14,7 +14,7 @@ public class VisitorController {
     @Autowired
     private VisitorService service;
 
-    @RequestMapping(value = "/visitors", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/visitors", method = RequestMethod.GET)
     public VisitorsDTO login() {
 
         return new VisitorsDTO(service.countVisitors());
