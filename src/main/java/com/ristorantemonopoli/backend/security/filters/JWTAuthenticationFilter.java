@@ -58,8 +58,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 			res.setHeader("Access-Control-Allow-Headers", "Authorization");
 			res.setHeader("Access-Control-Expose-Headers", "Authorization");
 			logger.debug("Attempting for Authentication......");
+
             ApplicationUser creds = new ObjectMapper()
                     .readValue(ist, ApplicationUser.class);
+
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             creds.getEmail(),

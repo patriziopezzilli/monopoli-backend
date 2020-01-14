@@ -33,8 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		JWTAuthenticationFilter authenticationFilter = new JWTAuthenticationFilter(authenticationManager());
 		authenticationFilter.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher(SecurityConstants.LOGIN_URL));
-		//http.csrf().disable().cors().and().authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint())
-		http.csrf().and().authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint())
+		http.csrf().disable().cors().and().authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint())
 				.permitAll().antMatchers(HttpMethod.POST, SecurityConstants.LOGIN_URL).permitAll().anyRequest().authenticated().and()
 				.addFilter(authenticationFilter).addFilter(new JWTAuthorizationFilter(authenticationManager()));
 	}
