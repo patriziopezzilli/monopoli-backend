@@ -1,11 +1,13 @@
 logging:
   level:
-    root: ERROR
-    org.springframework.web: ERROR
+    root: INFO
+    org.springframework.web: INFO
     org.hibernate: ERROR
     org.apache.commons.beanutils: ERROR
 
 spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
   servlet:
     multipart:
       enabled: true
@@ -13,15 +15,15 @@ spring:
       max-file-size: 200MB
       max-request-size: 215MB
   datasource:
-    url: jdbc:mysql://localhost:3306/nebular
-    username: root
-    password: root
+    url: jdbc:mysql://lhcp3004.webapps.net:3306/n63o4crk_monopoli
+    username: n63o4crk_guest
+    password: patriziopezzilli
     driverClassName: com.mysql.cj.jdbc.Driver
   
 server:
   port: 8888
   servlet :
-    context-path :  /nebular
+    context-path :  /monopoli-be/api
 
 management:
   server:

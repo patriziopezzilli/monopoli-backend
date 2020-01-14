@@ -8,11 +8,11 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cloud9</groupId>
-	<artifactId>nebular</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>Nebular Application</name>
-	<description>A Spring Boot Backend application for Nebular</description>
+	<groupId>com.ristorantemonopoli</groupId>
+	<artifactId>monopoli-backend</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Monopoli Backend</name>
+	<description>Applicativo Backend del sito Ristorante Monopoli</description>
 
 	<properties>
 		<java.version>1.8</java.version>
