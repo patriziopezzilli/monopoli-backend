@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ristorantemonopoli.backend.authentication.service.UserService;
-import com.ristorantemonopoli.backend.database.entity.ApplicationUser;
+import com.ristorantemonopoli.backend.dto.ApplicationUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

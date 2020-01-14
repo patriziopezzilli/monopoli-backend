@@ -1,4 +1,4 @@
-package com.ristorantemonopoli.backend.database.entity;
+package com.ristorantemonopoli.backend.dto;
 
 import java.util.List;
 
@@ -11,8 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 public class ApplicationUser {
-	
-   
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
