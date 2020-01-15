@@ -1,4 +1,4 @@
-package com.ristorantemonopoli.backend.authentication.service.impl;
+package com.ristorantemonopoli.backend.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

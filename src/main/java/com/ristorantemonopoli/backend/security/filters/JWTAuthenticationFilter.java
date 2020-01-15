@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
-import com.ristorantemonopoli.backend.authentication.service.UserService;
+import com.ristorantemonopoli.backend.service.UserService;
 import com.ristorantemonopoli.backend.dto.ApplicationUser;
 import org.json.JSONObject;
 import org.slf4j.Logger;

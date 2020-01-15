@@ -3,7 +3,7 @@ package com.ristorantemonopoli.backend.security.providers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ristorantemonopoli.backend.authentication.service.UserService;
+import com.ristorantemonopoli.backend.service.UserService;
 import com.ristorantemonopoli.backend.dto.ApplicationUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

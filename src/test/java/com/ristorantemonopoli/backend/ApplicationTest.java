@@ -3,7 +3,7 @@ package com.ristorantemonopoli.backend;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.ristorantemonopoli.backend.authentication.service.UserService;
+import com.ristorantemonopoli.backend.service.UserService;
 import com.ristorantemonopoli.backend.database.entity.Role;
 import org.junit.Test;
 import org.junit.runner.RunWith;

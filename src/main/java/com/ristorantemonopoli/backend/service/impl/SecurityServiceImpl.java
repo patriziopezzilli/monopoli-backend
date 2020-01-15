@@ -1,6 +1,6 @@
-package com.ristorantemonopoli.backend.authentication.service.impl;
+package com.ristorantemonopoli.backend.service.impl;
 
-import com.ristorantemonopoli.backend.authentication.service.SecurityService;
+import com.ristorantemonopoli.backend.service.SecurityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

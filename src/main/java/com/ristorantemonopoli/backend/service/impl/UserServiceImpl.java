@@ -1,6 +1,6 @@
-package com.ristorantemonopoli.backend.authentication.service.impl;
+package com.ristorantemonopoli.backend.service.impl;
 
-import com.ristorantemonopoli.backend.authentication.service.UserService;
+import com.ristorantemonopoli.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

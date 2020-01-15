@@ -1,4 +1,4 @@
-package com.ristorantemonopoli.backend.authentication.service;
+package com.ristorantemonopoli.backend.service;
 
 import java.util.List;
 

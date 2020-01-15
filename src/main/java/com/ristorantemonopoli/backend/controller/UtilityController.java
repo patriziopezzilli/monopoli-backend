@@ -1,7 +1,7 @@
 package com.ristorantemonopoli.backend.controller;
 
-import com.ristorantemonopoli.backend.authentication.service.SubscriberService;
-import com.ristorantemonopoli.backend.authentication.service.VisitorService;
+import com.ristorantemonopoli.backend.service.SubscriberService;
+import com.ristorantemonopoli.backend.service.VisitorService;
 import com.ristorantemonopoli.backend.dto.ProgressDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

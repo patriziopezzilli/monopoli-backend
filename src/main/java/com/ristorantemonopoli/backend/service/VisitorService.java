@@ -1,4 +1,4 @@
-package com.ristorantemonopoli.backend.authentication.service;
+package com.ristorantemonopoli.backend.service;
 
 public interface VisitorService {
 
