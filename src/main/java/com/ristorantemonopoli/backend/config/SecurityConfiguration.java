@@ -34,6 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		JWTAuthenticationFilter authenticationFilter = new JWTAuthenticationFilter(authenticationManager());
 		authenticationFilter.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher(SecurityConstants.LOGIN_URL));
 		http.csrf().disable().cors().and().authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint())
+				.permitAll().antMatchers(HttpMethod.GET, "/health")
 				.permitAll().antMatchers(HttpMethod.POST, SecurityConstants.LOGIN_URL).permitAll().anyRequest().authenticated().and()
 				.addFilter(authenticationFilter).addFilter(new JWTAuthorizationFilter(authenticationManager()));
 	}
