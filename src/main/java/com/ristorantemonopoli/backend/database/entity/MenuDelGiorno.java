@@ -22,6 +22,12 @@ public class MenuDelGiorno {
     public MenuDelGiorno() {
     }
 
+    public MenuDelGiorno(String nome, String prezzo, String categoria) {
+        this.nome = nome;
+        this.prezzo = prezzo;
+        this.categoria = categoria;
+    }
+
     public Long getId() {
         return id;
     }

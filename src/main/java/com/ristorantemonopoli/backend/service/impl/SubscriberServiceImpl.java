@@ -39,4 +39,12 @@ public class SubscriberServiceImpl implements SubscriberService {
 
         return subscriberDTOS;
     }
+
+    @Override
+    public void saveNewSubscriber(String mail) {
+        MenuSubscriber newSubscriber = new MenuSubscriber();
+        newSubscriber.setEmail(mail);
+
+        menuSubscriberRepository.save(newSubscriber);
+    }
 }

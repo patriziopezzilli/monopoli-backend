@@ -2,10 +2,9 @@ package com.ristorantemonopoli.backend.service.impl;
 
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoRepository;
-import com.ristorantemonopoli.backend.database.repository.VisiteRepository;
+import com.ristorantemonopoli.backend.dto.MenuDelGiornoSaveRequest;
 import com.ristorantemonopoli.backend.dto.PastoDTO;
 import com.ristorantemonopoli.backend.service.MenuDelGiornoService;
-import com.ristorantemonopoli.backend.service.VisitorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +32,34 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         ));
 
         return pastoDTOS;
+    }
+
+    @Override
+    public void saveMenuDelGiorno(MenuDelGiornoSaveRequest request) {
+        if (null != request) {
+            repository.deleteAll();
+
+            if (null != request.getPrimi()) {
+                request.getPrimi().forEach(p -> repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria())));
+            }
+
+            if (null != request.getSecondi()) {
+                request.getSecondi().forEach(p -> repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria())));
+            }
+
+            if (null != request.getPizze()) {
+                request.getPizze().forEach(p -> repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria())));
+            }
+        }
+    }
+
+    @Override
+    public void inviaInStampa() {
+
+    }
+
+    @Override
+    public void notificaClienti() {
+
     }
 }

@@ -11,4 +11,6 @@ public interface SubscriberService {
     Integer countCourtesySubscriber();
 
     List<SubscriberDTO> menuSubscribers();
+
+    void saveNewSubscriber(String mail);
 }
