@@ -443,7 +443,7 @@ public class TemplateUtils {
             "                        #PIZZA2#\n" +
             "                        <table class=\"es-content\" cellspacing=\"0\" cellpadding=\"0\"\n" +
             "                           align=\"center\"\n" +
-            "                           style=\"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;\">\n" +
+            "                           style=\"margin-top:2em; mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;\">\n" +
             "                           <tr style=\"border-collapse:collapse;\">\n" +
             "                              <td align=\"center\" style=\"padding:0;Margin:0;\">\n" +
             "                                 <table class=\"es-content-body\"\n" +
