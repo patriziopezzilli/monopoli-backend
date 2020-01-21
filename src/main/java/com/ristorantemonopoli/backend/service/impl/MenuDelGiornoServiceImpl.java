@@ -224,7 +224,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         // Sender's email ID needs to be mentioned
         String from = "info@ristorantemonopoli.com";
         final String username = "patriziopezzilli@gmail.com";//change accordingly
-        final String password = "Icardi99";//change accordingly
+        final String password = "qotfotyvrgylihrv";//change accordingly
 
         // Assuming you are sending email through relay.jangosmtp.net
         String host = "smtp.gmail.com";
