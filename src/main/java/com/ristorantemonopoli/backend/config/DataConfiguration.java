@@ -95,6 +95,7 @@ public class DataConfiguration {
 	    	dataSource.setDriverClassName(driverClassName);
 	        dataSource.setUsername(username);
 	        dataSource.setPassword(password);
+	        dataSource.setValidationQuery("SELECT 1");
 	        dataSource.setUrl(url);
 	        return dataSource;
 	    }
