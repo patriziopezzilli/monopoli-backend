@@ -41,7 +41,7 @@ public class MenuDelGiornoController {
 
     @RequestMapping(value = "/menudelgiorno/mail", method = RequestMethod.GET)
     private void inviaViaMail() {
-        menuDelGiornoService.inviaInStampa();
+        menuDelGiornoService.notificaClienti();
     }
 
     @RequestMapping(value = "/menudelgiorno", method = RequestMethod.POST)
