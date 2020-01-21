@@ -20,6 +20,10 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Override
     public List<PastoDTO> retrievePasti(String categoria) {
+
+        /**
+         * retrieve
+         */
         List<MenuDelGiorno> menuDelGiornos = repository.findByCategoria(categoria);
         List<PastoDTO> pastoDTOS = new ArrayList<>();
 
@@ -31,6 +35,16 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                         c.getCategoria()
                 )
         ));
+
+        /**
+         * remove duplicates
+         */
+        for (int i = 0; i < pastoDTOS.size() - 1; i++) {
+            if (pastoDTOS.get(i).getNome().equals(pastoDTOS.get(i + 1).getNome())) {
+                pastoDTOS.remove(i);
+                i--;
+            }
+        }
 
         return pastoDTOS;
     }
