@@ -39,14 +39,22 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         /**
          * remove duplicates
          */
-        for (int i = 0; i < pastoDTOS.size() - 1; i++) {
-            if (pastoDTOS.get(i).getNome().equals(pastoDTOS.get(i + 1).getNome())) {
-                pastoDTOS.remove(i);
-                i--;
+        ArrayList<PastoDTO> newList = new ArrayList<>();
+        for (PastoDTO element : pastoDTOS) {
+            boolean alreadyPresent = false;
+
+            for (PastoDTO pastoDTO : newList) {
+                if (pastoDTO.getNome().equals(element.getNome()) && pastoDTO.getCategoria().equals(element.getCategoria())) {
+                    alreadyPresent = true;
+                }
+            }
+
+            if (!alreadyPresent) {
+                newList.add(element);
             }
         }
 
-        return pastoDTOS;
+        return newList;
     }
 
     @Override
