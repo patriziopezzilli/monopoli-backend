@@ -1,8 +1,6 @@
 package com.ristorantemonopoli.backend.database.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -10,6 +8,8 @@ import java.util.Objects;
 public class MenuSubscriber {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     private Long id;
 
     private String email;
