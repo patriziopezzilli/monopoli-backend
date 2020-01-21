@@ -114,9 +114,9 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         /**
          * Replace date
          */
-        SimpleDateFormat sdf = new SimpleDateFormat(); // creo l'oggetto
-        String dataStr = sdf.format(new Date()); // data corrente (20 febbraio 2014)
-        sdf.applyPattern("dd/MM/yyyy");
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        String dataStr = formatter.format(date);
         mail = mail.replace("#DATA", dataStr);
 
         /**
