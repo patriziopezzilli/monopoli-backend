@@ -92,6 +92,14 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                 request.getSecondi().forEach(p -> {
                     String capitalizedName = (StringUtils.capitalize(p.getNome()));
                     p.setNome(capitalizedName);
+
+                    if (p.getPrezzo().contains(",")) {
+                        p.setPrezzo(p.getPrezzo().replace(",", "."));
+                    } else if (p.getPrezzo().contains(".")) {
+                        // nothing
+                    } else {
+                        p.setPrezzo(p.getPrezzo() + ".00");
+                    }
                     repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria()));
                 });
             }
@@ -100,6 +108,14 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                 request.getPizze().forEach(p -> {
                     String capitalizedName = (StringUtils.capitalize(p.getNome()));
                     p.setNome(capitalizedName);
+
+                    if (p.getPrezzo().contains(",")) {
+                        p.setPrezzo(p.getPrezzo().replace(",", "."));
+                    } else if (p.getPrezzo().contains(".")) {
+                        // nothing
+                    } else {
+                        p.setPrezzo(p.getPrezzo() + ".00");
+                    }
                     repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria()));
                 });
             }
