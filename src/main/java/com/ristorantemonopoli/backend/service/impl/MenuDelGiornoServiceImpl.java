@@ -40,7 +40,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                     new PastoDTO(
                             c.getNome(),
                             null,
-                            c.getPrezzo(),
+                            c.getPrezzo() + "€",
                             c.getCategoria()
                     )
             ));
@@ -76,6 +76,14 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                 request.getPrimi().forEach(p -> {
                     String capitalizedName = (StringUtils.capitalize(p.getNome()));
                     p.setNome(capitalizedName);
+
+                    if (p.getPrezzo().contains(",")) {
+                        p.setPrezzo(p.getPrezzo().replace(",", "."));
+                    } else if (p.getPrezzo().contains(".")) {
+                        // nothing
+                    } else {
+                        p.setPrezzo(p.getPrezzo() + ".00");
+                    }
                     repository.save(new MenuDelGiorno(p.getNome(), p.getPrezzo(), p.getCategoria()));
                 });
             }
@@ -124,35 +132,35 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
          */
         if (1 <= primi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", primi.get(0).getNome());
-            contenuto = contenuto.replace("#PREZZO#", primi.get(0).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", primi.get(0).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#PRIMO1#", contenuto);
         } else {
             mail = mail.replace("#PRIMO1#", "");
         }
         if (2 <= primi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", primi.get(1).getNome());
-            contenuto = contenuto.replace("#PREZZO#", primi.get(1).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", primi.get(1).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#PRIMO2#", contenuto);
         } else {
             mail = mail.replace("#PRIMO2#", "");
         }
         if (3 <= primi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", primi.get(2).getNome());
-            contenuto = contenuto.replace("#PREZZO#", primi.get(2).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", primi.get(2).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#PRIMO3#", contenuto);
         } else {
             mail = mail.replace("#PRIMO3#", "");
         }
         if (4 <= primi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", primi.get(3).getNome());
-            contenuto = contenuto.replace("#PREZZO#", primi.get(3).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", primi.get(3).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#PRIMO4#", contenuto);
         } else {
             mail = mail.replace("#PRIMO4#", "");
         }
         if (5 <= primi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", primi.get(4).getNome());
-            contenuto = contenuto.replace("#PREZZO#", primi.get(4).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", primi.get(4).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#PRIMO5#", contenuto);
         } else {
             mail = mail.replace("#PRIMO5#", "");
@@ -163,28 +171,28 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
          */
         if (1 <= secondi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", secondi.get(0).getNome());
-            contenuto = contenuto.replace("#PREZZO#", secondi.get(0).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", secondi.get(0).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#SECONDO1#", contenuto);
         } else {
             mail = mail.replace("#SECONDO1#", "");
         }
         if (2 <= secondi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", secondi.get(1).getNome());
-            contenuto = contenuto.replace("#PREZZO#", secondi.get(1).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", secondi.get(1).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#SECONDO2#", contenuto);
         } else {
             mail = mail.replace("#SECONDO2#", "");
         }
         if (3 <= secondi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", secondi.get(2).getNome());
-            contenuto = contenuto.replace("#PREZZO#", secondi.get(2).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", secondi.get(2).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#SECONDO3#", contenuto);
         } else {
             mail = mail.replace("#SECONDO3#", "");
         }
         if (4 <= secondi.size()) {
             String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", secondi.get(3).getNome());
-            contenuto = contenuto.replace("#PREZZO#", secondi.get(3).getPrezzo() + "&euro;");
+            contenuto = contenuto.replace("#PREZZO#", secondi.get(3).getPrezzo().replace("€", "&euro;"));
             mail = mail.replace("#SECONDO4#", contenuto);
         } else {
             mail = mail.replace("#SECONDO4#", "");
@@ -202,14 +210,14 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
              */
             if (1 <= pizze.size()) {
                 String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", pizze.get(0).getNome());
-                contenuto = contenuto.replace("#PREZZO#", pizze.get(0).getPrezzo() + "&euro;");
+                contenuto = contenuto.replace("#PREZZO#", pizze.get(0).getPrezzo().replace("€", "&euro;"));
                 mail = mail.replace("#PIZZA1#", contenuto);
             } else {
                 mail = mail.replace("#PIZZA1#", "");
             }
             if (2 <= pizze.size()) {
                 String contenuto = TemplateUtils.ENTRY_REPLACEMENT.replace("#NOME#", pizze.get(1).getNome());
-                contenuto = contenuto.replace("#PREZZO#", pizze.get(1).getPrezzo() + "&euro;");
+                contenuto = contenuto.replace("#PREZZO#", pizze.get(1).getPrezzo().replace("€", "&euro;"));
                 mail = mail.replace("#PIZZA2#", contenuto);
             } else {
                 mail = mail.replace("#PIZZA2#", "");
