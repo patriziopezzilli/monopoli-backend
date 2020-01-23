@@ -79,6 +79,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
                     if (p.getPrezzo().contains(",")) {
                         p.setPrezzo(p.getPrezzo().replace(",", "."));
+                        p.setPrezzo(p.getPrezzo().replace("€", ""));
                     } else if (p.getPrezzo().contains(".")) {
                         // nothing
                     } else {
@@ -95,6 +96,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
                     if (p.getPrezzo().contains(",")) {
                         p.setPrezzo(p.getPrezzo().replace(",", "."));
+                        p.setPrezzo(p.getPrezzo().replace("€", ""));
                     } else if (p.getPrezzo().contains(".")) {
                         // nothing
                     } else {
@@ -111,6 +113,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
                     if (p.getPrezzo().contains(",")) {
                         p.setPrezzo(p.getPrezzo().replace(",", "."));
+                        p.setPrezzo(p.getPrezzo().replace("€", ""));
                     } else if (p.getPrezzo().contains(".")) {
                         // nothing
                     } else {
