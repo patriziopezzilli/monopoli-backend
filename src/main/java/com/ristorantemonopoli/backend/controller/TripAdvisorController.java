@@ -11,7 +11,7 @@ public class TripAdvisorController {
     @Autowired
     private TripAdvisorService tripAdvisorService;
 
-    @RequestMapping(value = "/tripadavisor", method = RequestMethod.POST)
+    @RequestMapping(value = "/tripadvisor", method = RequestMethod.POST)
     public void saveRecensione(@RequestParam Long id, @RequestBody RecensioneDTO request) {
         tripAdvisorService.saveDescrizioneById(id, request);
     }
