@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PastoDTO {
 
+    private Long id;
     private String nome;
     private String descrizione;
     private String prezzo;
@@ -13,11 +14,27 @@ public class PastoDTO {
     public PastoDTO() {
     }
 
+    public PastoDTO(Long id, String nome, String descrizione, String prezzo, String categoria) {
+        this.id = id;
+        this.nome = nome;
+        this.descrizione = descrizione;
+        this.prezzo = prezzo;
+        this.categoria = categoria;
+    }
+
     public PastoDTO(String nome, String descrizione, String prezzo, String categoria) {
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
         this.categoria = categoria;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {

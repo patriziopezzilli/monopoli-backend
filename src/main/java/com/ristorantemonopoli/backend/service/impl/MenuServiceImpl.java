@@ -29,6 +29,7 @@ public class MenuServiceImpl implements MenuService {
         if (menuDelGiornos != null) {
             menuDelGiornos.forEach(c -> pastoDTOS.add(
                     new PastoDTO(
+                            c.getId(),
                             c.getNome(),
                             c.getDescrizione(),
                             c.getPrezzo() + "€",
@@ -56,5 +57,35 @@ public class MenuServiceImpl implements MenuService {
         }
 
         return newList;
+    }
+
+    @Override
+    public void createPasto(PastoDTO pasto) {
+        Menu menu = new Menu();
+        menu.setNome(pasto.getNome());
+        menu.setDescrizione(pasto.getDescrizione());
+        menu.setPrezzo(pasto.getPrezzo());
+        menu.setCategoria(pasto.getCategoria());
+
+        repository.save(menu);
+    }
+
+    @Override
+    public void deletePasto(Long id) {
+        repository.deleteById(id);
+    }
+
+    @Override
+    public void updatePasto(PastoDTO pasto) {
+        Menu found = repository.getOne(pasto.getId());
+
+        if (null != found) {
+            found.setNome(pasto.getNome());
+            found.setDescrizione(pasto.getDescrizione());
+            found.setPrezzo(pasto.getPrezzo());
+            found.setCategoria(pasto.getCategoria());
+
+            repository.save(found);
+        }
     }
 }

@@ -8,4 +8,10 @@ import java.util.List;
 public interface MenuService {
 
     List<PastoDTO> retrievePasti(String categoria);
+
+    void createPasto(PastoDTO pasto);
+
+    void deletePasto(Long id);
+
+    void updatePasto(PastoDTO pasto);
 }
