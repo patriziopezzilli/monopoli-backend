@@ -1,6 +1,8 @@
 package com.ristorantemonopoli.backend.service.impl;
 
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
+import com.ristorantemonopoli.backend.database.entity.MenuDelGiornoData;
+import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoDataRepository;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoRepository;
 import com.ristorantemonopoli.backend.dto.MenuDelGiornoSaveRequest;
 import com.ristorantemonopoli.backend.dto.PastoDTO;
@@ -30,6 +32,9 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private MenuDelGiornoDataRepository menuDelGiornoDataRepository;
 
     @Override
     public List<PastoDTO> retrievePasti(String categoria) {
@@ -250,6 +255,10 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         } else {
             mail = mail.replace("PRESENZAPIZZE", "display:none;");
         }
+
+        MenuDelGiornoData data = menuDelGiornoDataRepository.getOne(1L);
+        data.setValore(dataStr);
+        menuDelGiornoDataRepository.save(data);
 
         try {
             // Recipient's email ID needs to be mentioned.
