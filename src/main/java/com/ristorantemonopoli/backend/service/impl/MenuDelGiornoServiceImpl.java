@@ -4,26 +4,32 @@ import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoRepository;
 import com.ristorantemonopoli.backend.dto.MenuDelGiornoSaveRequest;
 import com.ristorantemonopoli.backend.dto.PastoDTO;
+import com.ristorantemonopoli.backend.dto.SubscriberDTO;
+import com.ristorantemonopoli.backend.service.MailService;
 import com.ristorantemonopoli.backend.service.MenuDelGiornoService;
+import com.ristorantemonopoli.backend.service.SubscriberService;
 import com.ristorantemonopoli.backend.utils.TemplateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Properties;
+import java.util.stream.Collectors;
 
 @Service
 public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Autowired
     private MenuDelGiornoRepository repository;
+
+    @Autowired
+    private SubscriberService subscriberService;
+
+    @Autowired
+    private MailService mailService;
 
     @Override
     public List<PastoDTO> retrievePasti(String categoria) {
@@ -245,56 +251,13 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
             mail = mail.replace("PRESENZAPIZZE", "display:none;");
         }
 
-        // Recipient's email ID needs to be mentioned.
-        String to = "patriziopezzilli@gmail.com";
-
-        // Sender's email ID needs to be mentioned
-        String from = "info@ristorantemonopoli.com";
-        final String username = "AKIA2QW6NI57B7HGWN7Q";//change accordingly
-        final String password = "BLa4xu+cm8KyTAAUlwsQ6x6EtAAUeArvJN1yvOotjxTb";//change accordingly
-
-        // Assuming you are sending email through relay.jangosmtp.net
-        String host = "email-smtp.eu-west-1.amazonaws.com";
-
-        Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "587");
-
-        // Get the Session object.
-        Session session = Session.getInstance(props,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
-
         try {
-            // Create a default MimeMessage object.
-            Message message = new MimeMessage(session);
+            // Recipient's email ID needs to be mentioned.
+            List<SubscriberDTO> subscriberDTOS = subscriberService.menuSubscribers();
+            String subject = "Menu del giorno " + dataStr;
 
-            // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
-
-            // Set To: header field of the header.
-            message.setRecipients(Message.RecipientType.TO,
-                    InternetAddress.parse(to));
-
-            // Set Subject: header field
-            message.setSubject("Menu del giorno " + dataStr);
-
-            // Send the actual HTML message, as big as you like
-            message.setContent(
-                    mail,
-                    "text/html");
-
-            // Send message
-            Transport.send(message);
-
-            System.out.println("Sent message successfully....");
-
-        } catch (MessagingException e) {
+            mailService.sendMail(subscriberDTOS.stream().map(SubscriberDTO::getMail).collect(Collectors.toList()), subject, mail);
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
