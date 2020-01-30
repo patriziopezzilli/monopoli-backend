@@ -46,6 +46,6 @@ public class MessaggioServiceImpl implements MessaggioService {
                         c.getRisposto()
                 )
         ));
-        return null;
+        return response;
     }
 }
