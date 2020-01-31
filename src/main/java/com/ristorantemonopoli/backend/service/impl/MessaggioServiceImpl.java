@@ -34,6 +34,9 @@ public class MessaggioServiceImpl implements MessaggioService {
             mailContent = mailContent.replace("#RISPOSTA#", risposta);
 
             mailService.sendMail(Arrays.asList(messaggio.getMail()), "Risposta del Ristorante", mailContent);
+
+            messaggio.setRisposto(1);
+            repository.save(messaggio);
         }
     }
 
@@ -42,15 +45,19 @@ public class MessaggioServiceImpl implements MessaggioService {
         List<Messaggio> messaggios = repository.findAll();
         List<MessaggioDTO> response = new ArrayList<>();
 
-        messaggios.forEach(c -> response.add(
-                new MessaggioDTO(
-                        c.getId(),
-                        c.getNome(),
-                        c.getMail(),
-                        c.getMessaggio(),
-                        c.getRisposto()
-                )
-        ));
+        messaggios.forEach(c -> {
+            if (c.getRisposto() != 1) {
+
+                response.add(
+                        new MessaggioDTO(
+                                c.getId(),
+                                c.getNome(),
+                                c.getMail(),
+                                c.getMessaggio(),
+                                c.getRisposto()
+                        ));
+            }
+        });
         return response;
     }
 }
