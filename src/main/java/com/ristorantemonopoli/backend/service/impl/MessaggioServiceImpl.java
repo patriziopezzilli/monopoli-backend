@@ -29,7 +29,7 @@ public class MessaggioServiceImpl implements MessaggioService {
 
         // add template
         if (null != messaggio && null != messaggio.getMail()) {
-            String mailContent = MAIL_MESSAGE_RESPONSE_TEMPLATE.replace("#NOME#", messaggio.getNome());
+            String mailContent = MAIL_MESSAGE_RESPONSE_TEMPLATE.replace("#NOME#", messaggio.getNome().toUpperCase());
             mailContent = mailContent.replace("#DOMANDA#", messaggio.getMessaggio());
             mailContent = mailContent.replace("#RISPOSTA", risposta);
 
