@@ -24,13 +24,13 @@ public class MenuController {
     }
 
     @RequestMapping(value = "/menu/{id}", method = RequestMethod.PUT)
-    private void deleteById(@PathVariable Long id, @RequestBody PastoDTO aggiornamento) {
+    private void updateById(@PathVariable Long id, @RequestBody PastoDTO aggiornamento) {
         aggiornamento.setId(id);
         menuService.updatePasto(aggiornamento);
     }
 
     @RequestMapping(value = "/menu", method = RequestMethod.POST)
-    private void deleteById(@RequestBody PastoDTO nuovo) {
+    private void create(@RequestBody PastoDTO nuovo) {
         menuService.createPasto(nuovo);
     }
 }

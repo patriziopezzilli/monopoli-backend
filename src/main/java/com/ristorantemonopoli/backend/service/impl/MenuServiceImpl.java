@@ -61,6 +61,10 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     public void createPasto(PastoDTO pasto) {
+        if (pasto.getPrezzo() != null && pasto.getPrezzo().contains("€")) {
+            pasto.setPrezzo(pasto.getPrezzo().replace("€", ""));
+        }
+
         Menu menu = new Menu();
         menu.setNome(pasto.getNome());
         menu.setDescrizione(pasto.getDescrizione());
@@ -78,6 +82,10 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public void updatePasto(PastoDTO pasto) {
         Menu found = repository.getOne(pasto.getId());
+
+        if (pasto.getPrezzo() != null && pasto.getPrezzo().contains("€")) {
+            pasto.setPrezzo(pasto.getPrezzo().replace("€", ""));
+        }
 
         if (null != found) {
             found.setNome(pasto.getNome());
