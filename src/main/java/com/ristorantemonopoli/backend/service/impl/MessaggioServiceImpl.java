@@ -3,7 +3,6 @@ package com.ristorantemonopoli.backend.service.impl;
 import com.ristorantemonopoli.backend.database.entity.Messaggio;
 import com.ristorantemonopoli.backend.database.repository.MessaggioRepository;
 import com.ristorantemonopoli.backend.dto.MessaggioDTO;
-import com.ristorantemonopoli.backend.dto.PastoDTO;
 import com.ristorantemonopoli.backend.service.MailService;
 import com.ristorantemonopoli.backend.service.MessaggioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.ristorantemonopoli.backend.utils.TemplateUtils.MAIL_MESSAGE_RESPONSE_TEMPLATE;
 
 @Service
 public class MessaggioServiceImpl implements MessaggioService {
@@ -28,7 +29,11 @@ public class MessaggioServiceImpl implements MessaggioService {
 
         // add template
         if (null != messaggio && null != messaggio.getMail()) {
-            mailService.sendMail(Arrays.asList(messaggio.getMail()), "Risposta del Ristorante", risposta);
+            String mailContent = MAIL_MESSAGE_RESPONSE_TEMPLATE.replace("#NOME#", messaggio.getNome());
+            mailContent = mailContent.replace("#DOMANDA#", messaggio.getMessaggio());
+            mailContent = mailContent.replace("#RISPOSTA", risposta);
+
+            mailService.sendMail(Arrays.asList(messaggio.getMail()), "Risposta del Ristorante", mailContent);
         }
     }
 
