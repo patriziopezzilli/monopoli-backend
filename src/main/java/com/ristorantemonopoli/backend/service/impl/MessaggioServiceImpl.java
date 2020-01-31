@@ -31,7 +31,7 @@ public class MessaggioServiceImpl implements MessaggioService {
         if (null != messaggio && null != messaggio.getMail()) {
             String mailContent = MAIL_MESSAGE_RESPONSE_TEMPLATE.replace("#NOME#", messaggio.getNome().toUpperCase());
             mailContent = mailContent.replace("#DOMANDA#", messaggio.getMessaggio());
-            mailContent = mailContent.replace("#RISPOSTA", risposta);
+            mailContent = mailContent.replace("#RISPOSTA#", risposta);
 
             mailService.sendMail(Arrays.asList(messaggio.getMail()), "Risposta del Ristorante", mailContent);
         }
