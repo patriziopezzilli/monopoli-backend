@@ -3,10 +3,7 @@ package com.ristorantemonopoli.backend.controller;
 import com.ristorantemonopoli.backend.dto.PastoDTO;
 import com.ristorantemonopoli.backend.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,4 +17,22 @@ public class MenuController {
     private List<PastoDTO> pastoDTOList(@RequestParam String categoria) {
         return menuService.retrievePasti(categoria);
     }
+
+    @RequestMapping(value = "/menu/{id}", method = RequestMethod.DELETE)
+    private void deleteById(@PathVariable Long id) {
+        menuService.deletePasto(id);
+    }
+
+    @RequestMapping(value = "/menu/{id}", method = RequestMethod.PUT)
+    private void deleteById(@PathVariable Long id, @RequestBody PastoDTO aggiornamento) {
+        aggiornamento.setId(id);
+        menuService.updatePasto(aggiornamento);
+    }
+
+    @RequestMapping(value = "/menu", method = RequestMethod.POST)
+    private void deleteById(@RequestBody PastoDTO nuovo) {
+        menuService.createPasto(nuovo);
+    }
 }
+
+
