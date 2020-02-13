@@ -191,7 +191,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                     .map(PastoDTO::getPrezzo)
                     .collect(Collectors.toList())) {
 
-                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s.replace("€", "&euro;"));
             }
 
             mail = mail.replace(LIST_PRIMI_NOMI, listNomi);
@@ -222,7 +222,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                     .map(PastoDTO::getPrezzo)
                     .collect(Collectors.toList())) {
 
-                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s.replace("€", "&euro;"));
             }
 
             mail = mail.replace(LIST_SECONDI_NOMI, listNomi);
@@ -253,7 +253,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
                     .map(PastoDTO::getPrezzo)
                     .collect(Collectors.toList())) {
 
-                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s.replace("€", "&euro;"));
             }
 
             mail = mail.replace(LIST_PIZZE_NOMI, listNomi);
