@@ -3,7 +3,6 @@
 
 <head>
     <meta http-equiv=Content-Type content="text/html; charset=windows-1252" />
-    <!--[if !mso]>
     <style>
         v\: * {
             behavior: url(#default#VML);
@@ -21,10 +20,7 @@
             behavior: url(#default#VML);
         }
     </style>
-    <![endif]-->
     <style>
-        <!--
-        /* Definizione dei tipi di carattere */
         @font-face {
             font-family: myFont;
             src: url(http://www.ristorantemonopoli.com/custom_fonts/babas/BebasNeue-Regular.woff);
@@ -57,10 +53,8 @@
         @page {
             size: 8 . -2019in 11.2232in;
         }
-
-        -->
     </style>
-    <!--[if gte mso 9]><xml>
+    <xml>
      <o:shapedefaults v:ext="edit" spidmax="5122" fill="f" fillcolor="white [7]"
       strokecolor="black [0]">
       <v:fill color="white [7]" color2="white [7]" on="f"/>
@@ -77,13 +71,13 @@
        shadowcolor="#ccc [4]"/>
      </o:shapedefaults><o:shapelayout v:ext="edit">
       <o:idmap v:ext="edit" data="1"/>
-     </o:shapelayout></xml><![endif]-->
+     </o:shapelayout></xml>
 </head>
 
 <body link="#0066FF" vlink="#6633CC" style='margin:0'>
 
 <div style='position:absolute;width:8.-1863in;height:10.-183in'>
-    <!--[if gte vml 1]><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+    <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
      path="m,l,21600r21600,l21600,xe">
      <v:stroke joinstyle="miter"/>
      <v:path gradientshapeok="t" o:connecttype="rect"/>
@@ -103,22 +97,22 @@
      <v:shadow color="#ccc [4]"/>
      <v:path insetpenok="f"/>
      <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-    </v:shape><![endif]--><![if !vml]><span style='position:absolute;z-index:1;
+    </v:shape><![endif]--><span style='position:absolute;z-index:1;
 left:0px;top:12px;width:384px;height:50px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=50 style='vertical-align:top'><![endif]>
+  <td width=384 height=50 style='vertical-align:top'>
   <div v:shape="_x0000_s1025" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:17.0pt;font-weight:bold;language:it;'>Menù del giorno</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1026" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1026" type="#_x0000_t202"
  style='position:absolute;left:0;top:33.01pt;width:4in;height:25.67pt;
  z-index:2;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -134,22 +128,22 @@ left:0px;top:12px;width:384px;height:50px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:2;
+</v:shape><span style='position:absolute;z-index:2;
 left:0px;top:44px;width:384px;height:35px'>
 
 <table style="margin-top:0.2em;" cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1026" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Primi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1027" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:55.15pt;width:231pt;height:22.68pt;
  z-index:3;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -165,21 +159,21 @@ left:0px;top:44px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:3;
+</v:shape><span style='position:absolute;z-index:3;
 left:4px;top:74px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1027" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #PRIMO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1049" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1049" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:55.15pt;width:51pt;height:22.68pt;
  z-index:6;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -195,21 +189,21 @@ left:4px;top:74px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:6;
+</v:shape><span style='position:absolute;z-index:6;
 left:312px;top:74px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1049" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #PRIMOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1051" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1051" type="#_x0000_t202"
  style='position:absolute;left:0;top:156pt;width:4in;height:25.67pt;z-index:7;
  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -225,22 +219,22 @@ left:312px;top:74px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:7;
+</v:shape><span style='position:absolute;z-index:7;
 left:0px;top:208px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1051" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Secondi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1052" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1052" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:180pt;width:231pt;height:22.67pt;
  z-index:8;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -256,21 +250,21 @@ left:0px;top:208px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:8;
+</v:shape><span style='position:absolute;z-index:8;
 left:4px;top:240px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1052" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #SECONDO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1053" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1053" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:180pt;width:51pt;height:22.67pt;
  z-index:9;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -286,22 +280,22 @@ left:4px;top:240px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:9;
+</v:shape><span style='position:absolute;z-index:9;
 left:312px;top:240px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1053" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
      #SECONDOPREZZO#
 
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1054" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1054" type="#_x0000_t202"
  style='position:absolute;left:0;top:291pt;width:4in;height:25.67pt;z-index:10;
  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -317,22 +311,22 @@ left:312px;top:240px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:10;
+</v:shape><span style='position:absolute;z-index:10;
 left:0px;top:388px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1054" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Pizze</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1055" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1055" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:318pt;width:231pt;height:22.67pt;
  z-index:11;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -348,21 +342,21 @@ left:0px;top:388px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:11;
+</v:shape><span style='position:absolute;z-index:11;
 left:4px;top:424px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1055" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
      #PIZZE#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1056" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1056" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:318pt;width:51pt;height:22.67pt;
  z-index:12;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -378,21 +372,21 @@ left:4px;top:424px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:12;
+</v:shape><span style='position:absolute;z-index:12;
 left:312px;top:424px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1056" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
        #PIZZEPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1057" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1057" type="#_x0000_t202"
  style='position:absolute;left:78pt;top:5in;width:165pt;height:27pt;z-index:13;
  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -408,12 +402,12 @@ left:312px;top:424px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:13;
+</v:shape><span style='position:absolute;z-index:13;
 left:104px;top:480px;width:220px;height:36px'>
 
 <table style="margin-right: 2em;" cellpadding=0 cellspacing=0>
  <tr>
-  <td width=220 height=36 style='vertical-align:top'><![endif]>
+  <td width=220 height=36 style='vertical-align:top'>
   <div v:shape="_x0000_s1057" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
@@ -421,11 +415,11 @@ left:104px;top:480px;width:220px;height:36px'>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:8.0pt;language:it'>www.ristorantemonopoli.com</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1058" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1058" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:6pt;width:4in;height:36.85pt;
  z-index:14;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -441,22 +435,22 @@ left:104px;top:480px;width:220px;height:36px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:14;
+</v:shape><span style='position:absolute;z-index:14;
 left:392px;top:8px;width:384px;height:50px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=50 style='vertical-align:top'><![endif]>
+  <td width=384 height=50 style='vertical-align:top'>
   <div v:shape="_x0000_s1058" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:16.0pt;font-weight:bold;language:it'>Menù del giorno</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1059" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1059" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:30.01pt;width:4in;height:25.67pt;
  z-index:15;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -472,22 +466,22 @@ left:392px;top:8px;width:384px;height:50px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:15;
+</v:shape><span style='position:absolute;z-index:15;
 left:392px;top:40px;width:384px;height:35px'>
 
 <table style="margin-top: 0.2em;" cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1059" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Primi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1060" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1060" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:52.15pt;width:231pt;height:22.68pt;
  z-index:16;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -503,22 +497,22 @@ left:392px;top:40px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:16;
+</v:shape><span style='position:absolute;z-index:16;
 left:396px;top:70px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1060" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
        #PRIMO#
 
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1061" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1061" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:52.15pt;width:51pt;height:22.68pt;
  z-index:17;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -534,21 +528,21 @@ left:396px;top:70px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:17;
+</v:shape><span style='position:absolute;z-index:17;
 left:704px;top:70px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1061" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #PRIMOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1062" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1062" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:153pt;width:4in;height:25.67pt;
  z-index:18;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -564,22 +558,22 @@ left:704px;top:70px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:18;
+</v:shape><span style='position:absolute;z-index:18;
 left:392px;top:204px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1062" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Secondi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1063" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1063" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:177pt;width:231pt;height:22.67pt;
  z-index:19;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -595,21 +589,21 @@ left:392px;top:204px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:19;
+</v:shape><span style='position:absolute;z-index:19;
 left:396px;top:236px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1063" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #SECONDO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1064" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1064" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:177pt;width:51pt;height:22.67pt;
  z-index:20;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -625,21 +619,21 @@ left:396px;top:236px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:20;
+</v:shape><span style='position:absolute;z-index:20;
 left:704px;top:236px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1064" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #SECONDOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1065" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1065" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:4in;width:4in;height:25.67pt;
  z-index:21;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -655,22 +649,22 @@ left:704px;top:236px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:21;
+</v:shape><span style='position:absolute;z-index:21;
 left:392px;top:384px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1065" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Pizze</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1066" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1066" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:315pt;width:231pt;height:22.67pt;
  z-index:22;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -686,20 +680,20 @@ left:392px;top:384px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:22;
+</v:shape><span style='position:absolute;z-index:22;
 left:396px;top:420px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1066" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #PIZZE#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1067" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1067" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:315pt;width:51pt;height:22.67pt;
  z-index:23;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -715,21 +709,21 @@ left:396px;top:420px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:23;
+</v:shape><span style='position:absolute;z-index:23;
 left:704px;top:420px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1067" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #PIZZEPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1068" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1068" type="#_x0000_t202"
  style='position:absolute;left:5in;top:5in;width:165pt;height:27pt;z-index:24;
  mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -745,12 +739,12 @@ left:704px;top:420px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:24;
+</v:shape><span style='position:absolute;z-index:24;
 left:480px;top:480px;width:220px;height:36px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=220 height=36 style='vertical-align:top'><![endif]>
+  <td width=220 height=36 style='vertical-align:top'>
   <div v:shape="_x0000_s1068" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
@@ -758,11 +752,11 @@ left:480px;top:480px;width:220px;height:36px'>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:8.0pt;font-weight:bold;language:it'>www.ristorantemonopoli.com</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1069" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1069" type="#_x0000_t202"
  style='position:absolute;left:0;top:416.19pt;width:4in;height:36.85pt;
  z-index:25;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -778,22 +772,22 @@ left:480px;top:480px;width:220px;height:36px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:25;
+</v:shape><span style='position:absolute;z-index:25;
 left:0px;top:555px;width:384px;height:50px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=50 style='vertical-align:top'><![endif]>
+  <td width=384 height=50 style='vertical-align:top'>
   <div v:shape="_x0000_s1069" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:16.0pt;font-weight:bold;language:it'>Menù del giorno</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1070" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1070" type="#_x0000_t202"
  style='position:absolute;left:0;top:440.2pt;width:4in;height:25.68pt;
  z-index:26;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -809,22 +803,22 @@ left:0px;top:555px;width:384px;height:50px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:26;
+</v:shape><span style='position:absolute;z-index:26;
 left:0px;top:587px;width:384px;height:35px'>
 
 <table style="margin-top: 0.2em;" cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1070" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Primi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1071" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1071" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:462.35pt;width:231pt;height:22.68pt;
  z-index:27;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -840,20 +834,20 @@ left:0px;top:587px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:27;
+</v:shape><span style='position:absolute;z-index:27;
 left:4px;top:616px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1071" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #PRIMO#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1072" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1072" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:462.35pt;width:51pt;height:22.68pt;
  z-index:28;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -869,21 +863,21 @@ left:4px;top:616px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:28;
+</v:shape><span style='position:absolute;z-index:28;
 left:312px;top:616px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1072" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   #PRIMOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1073" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1073" type="#_x0000_t202"
  style='position:absolute;left:0;top:563.19pt;width:4in;height:25.68pt;
  z-index:29;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -899,22 +893,22 @@ left:312px;top:616px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:29;
+</v:shape><span style='position:absolute;z-index:29;
 left:0px;top:751px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1073" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Secondi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1074" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1074" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:587.19pt;width:231pt;height:22.68pt;
  z-index:30;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -930,20 +924,20 @@ left:0px;top:751px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:30;
+</v:shape><span style='position:absolute;z-index:30;
 left:4px;top:783px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1074" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #SECONDO#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1075" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1075" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:587.19pt;width:51pt;height:22.68pt;
  z-index:31;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -959,21 +953,21 @@ left:4px;top:783px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:31;
+</v:shape><span style='position:absolute;z-index:31;
 left:312px;top:783px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1075" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #SECONDOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1076" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1076" type="#_x0000_t202"
  style='position:absolute;left:0;top:698.19pt;width:4in;height:25.68pt;
  z-index:32;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -989,22 +983,22 @@ left:312px;top:783px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:32;
+</v:shape><span style='position:absolute;z-index:32;
 left:0px;top:931px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1076" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Pizze</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1077" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1077" type="#_x0000_t202"
  style='position:absolute;left:3pt;top:725.19pt;width:231pt;height:22.68pt;
  z-index:33;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1020,20 +1014,20 @@ left:0px;top:931px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:33;
+</v:shape><span style='position:absolute;z-index:33;
 left:4px;top:967px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1077" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #PIZZE#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1078" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1078" type="#_x0000_t202"
  style='position:absolute;left:234pt;top:725.19pt;width:51pt;height:22.68pt;
  z-index:34;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1049,21 +1043,21 @@ left:4px;top:967px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:34;
+</v:shape><span style='position:absolute;z-index:34;
 left:312px;top:967px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1078" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #PIZZEPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1079" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1079" type="#_x0000_t202"
  style='position:absolute;left:66pt;top:758.19pt;width:165pt;height:27pt;
  z-index:35;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1079,12 +1073,12 @@ left:312px;top:967px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:35;
+</v:shape><span style='position:absolute;z-index:35;
 left:88px;top:1011px;width:220px;height:36px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=220 height=36 style='vertical-align:top'><![endif]>
+  <td width=220 height=36 style='vertical-align:top'>
   <div v:shape="_x0000_s1079" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
@@ -1092,11 +1086,11 @@ left:88px;top:1011px;width:220px;height:36px'>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:8.0pt;font-weight:bold;language:it'>www.ristorantemonopoli.com</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1080" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1080" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:416.19pt;width:4in;height:36.85pt;
  z-index:36;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1112,22 +1106,22 @@ left:88px;top:1011px;width:220px;height:36px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:36;
+</v:shape><span style='position:absolute;z-index:36;
 left:392px;top:555px;width:384px;height:50px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=50 style='vertical-align:top'><![endif]>
+  <td width=384 height=50 style='vertical-align:top'>
   <div v:shape="_x0000_s1080" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:16.0pt;font-weight:bold;language:it'>Menù del giorno</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1081" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1081" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:440.2pt;width:4in;height:25.68pt;
  z-index:37;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1143,22 +1137,22 @@ left:392px;top:555px;width:384px;height:50px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:37;
+</v:shape><span style='position:absolute;z-index:37;
 left:392px;top:587px;width:384px;height:35px'>
 
 <table style="margin-top: 0.2em;" cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1081" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Primi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1082" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1082" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:462.35pt;width:231pt;height:22.68pt;
  z-index:38;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1174,20 +1168,20 @@ left:392px;top:587px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:38;
+</v:shape><span style='position:absolute;z-index:38;
 left:396px;top:616px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1082" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #PRIMO#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1083" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1083" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:462.35pt;width:51pt;height:22.68pt;
  z-index:39;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1203,21 +1197,21 @@ left:396px;top:616px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:39;
+</v:shape><span style='position:absolute;z-index:39;
 left:704px;top:616px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1083" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #PRIMOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1084" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1084" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:563.19pt;width:4in;height:25.68pt;
  z-index:40;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1233,22 +1227,22 @@ left:704px;top:616px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:40;
+</v:shape><span style='position:absolute;z-index:40;
 left:392px;top:751px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1084" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Secondi</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1085" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1085" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:587.19pt;width:231pt;height:22.68pt;
  z-index:41;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1264,20 +1258,20 @@ left:392px;top:751px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:41;
+</v:shape><span style='position:absolute;z-index:41;
 left:396px;top:783px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1085" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #SECONDO#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1086" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1086" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:587.19pt;width:51pt;height:22.68pt;
  z-index:42;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1293,21 +1287,21 @@ left:396px;top:783px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:42;
+</v:shape><span style='position:absolute;z-index:42;
 left:704px;top:783px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1086" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #SECONDOPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1087" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1087" type="#_x0000_t202"
  style='position:absolute;left:294pt;top:698.19pt;width:4in;height:25.68pt;
  z-index:43;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1323,22 +1317,22 @@ left:704px;top:783px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:43;
+</v:shape><span style='position:absolute;z-index:43;
 left:392px;top:931px;width:384px;height:35px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=384 height=35 style='vertical-align:top'><![endif]>
+  <td width=384 height=35 style='vertical-align:top'>
   <div v:shape="_x0000_s1087" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:12.0pt;font-weight:bold;language:it'>Pizze</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1088" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1088" type="#_x0000_t202"
  style='position:absolute;left:297pt;top:725.19pt;width:231pt;height:22.68pt;
  z-index:44;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1354,20 +1348,20 @@ left:392px;top:931px;width:384px;height:35px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:44;
+</v:shape><span style='position:absolute;z-index:44;
 left:396px;top:967px;width:308px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=308 height=31 style='vertical-align:top'><![endif]>
+  <td width=308 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1088" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
 #PIZZE#  </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1089" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1089" type="#_x0000_t202"
  style='position:absolute;left:528pt;top:725.19pt;width:51pt;height:22.68pt;
  z-index:45;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1383,21 +1377,21 @@ left:396px;top:967px;width:308px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:45;
+</v:shape><span style='position:absolute;z-index:45;
 left:704px;top:967px;width:68px;height:31px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=68 height=31 style='vertical-align:top'><![endif]>
+  <td width=68 height=31 style='vertical-align:top'>
   <div v:shape="_x0000_s1089" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
    #PIZZEPREZZO#
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1090" type="#_x0000_t202"
+</span><v:shape id="_x0000_s1090" type="#_x0000_t202"
  style='position:absolute;left:5in;top:758.19pt;width:165pt;height:27pt;
  z-index:46;mso-wrap-distance-left:2.88pt;mso-wrap-distance-top:2.88pt;
  mso-wrap-distance-right:2.88pt;mso-wrap-distance-bottom:2.88pt' filled="f"
@@ -1413,12 +1407,12 @@ left:704px;top:967px;width:68px;height:31px'>
  <v:shadow color="#ccc [4]"/>
  <v:path insetpenok="f"/>
  <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-</v:shape><![endif]--> <![if !vml]><span style='position:absolute;z-index:46;
+</v:shape><span style='position:absolute;z-index:46;
 left:480px;top:1011px;width:220px;height:36px'>
 
 <table cellpadding=0 cellspacing=0>
  <tr>
-  <td width=220 height=36 style='vertical-align:top'><![endif]>
+  <td width=220 height=36 style='vertical-align:top'>
   <div v:shape="_x0000_s1090" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
@@ -1426,11 +1420,11 @@ left:480px;top:1011px;width:220px;height:36px'>
   <p class=MsoNormal style='text-align:center;text-align:center'><span lang=it
                                                                        style='font-family: myFont,sans-serif !important;font-size:8.0pt;font-weight:bold;language:it'>www.ristorantemonopoli.com</span></p>
   </div>
-  <![if !vml]></td>
+  </td>
  </tr>
 </table>
 
-</span><![endif]>
+</span>
 </div>
 
 </body>
