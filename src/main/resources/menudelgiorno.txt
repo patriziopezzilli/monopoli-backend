@@ -696,7 +696,7 @@ left:396px;top:420px;width:308px;height:31px'>
   <td width=308 height=31 style='vertical-align:top'><![endif]>
   <div v:shape="_x0000_s1066" style='padding:2.88pt 2.88pt 2.88pt 2.88pt'
        class=shape>
-#PIZZA#  </div>
+#PIZZE#  </div>
   <![if !vml]></td>
  </tr>
 </table>
