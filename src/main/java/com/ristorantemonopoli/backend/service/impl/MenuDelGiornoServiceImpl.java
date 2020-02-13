@@ -1,5 +1,6 @@
 package com.ristorantemonopoli.backend.service.impl;
 
+import com.ristorantemonopoli.backend.constants.InternalTemplateUtils;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiornoData;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoDataRepository;
@@ -17,9 +18,12 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static com.ristorantemonopoli.backend.constants.InternalTemplateUtils.*;
 
 @Service
 public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
@@ -138,7 +142,112 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Override
     public void inviaInStampa() {
+        String mail = (InternalTemplateUtils.MENU_DEL_GIORNO_INTERNAL);
 
+        List<PastoDTO> primi = retrievePasti("primo");
+        List<PastoDTO> secondi = retrievePasti("secondo");
+        List<PastoDTO> pizze = retrievePasti("pizza");
+
+        /**
+         * Primi
+         */
+        if (null != primi && primi.size() > 0) {
+
+            /**
+             * Nomi
+             */
+            String listNomi = "";
+            for (String s : primi.stream()
+                    .map(PastoDTO::getNome)
+                    .collect(Collectors.toList())) {
+
+                listNomi += NOME_PLACEHOLDER.replace("#NOME#", s);
+            }
+
+            /**
+             * Prezzo
+             */
+            String listPrezzi = "";
+            for (String s : primi.stream()
+                    .map(PastoDTO::getPrezzo)
+                    .collect(Collectors.toList())) {
+
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+            }
+
+            mail = mail.replace(LIST_PRIMI_NOMI, listNomi);
+            mail = mail.replace(LIST_PRIMI_PREZZI, listPrezzi);
+        }
+
+        /**
+         * Secondi
+         */
+        if (null != secondi && secondi.size() > 0) {
+
+            /**
+             * Nomi
+             */
+            String listNomi = "";
+            for (String s : secondi.stream()
+                    .map(PastoDTO::getNome)
+                    .collect(Collectors.toList())) {
+
+                listNomi += NOME_PLACEHOLDER.replace("#NOME#", s);
+            }
+
+            /**
+             * Prezzo
+             */
+            String listPrezzi = "";
+            for (String s : secondi.stream()
+                    .map(PastoDTO::getPrezzo)
+                    .collect(Collectors.toList())) {
+
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+            }
+
+            mail = mail.replace(LIST_SECONDI_NOMI, listNomi);
+            mail = mail.replace(LIST_SECONDI_PREZZI, listPrezzi);
+        }
+
+        /**
+         * Pizze
+         */
+        if (null != pizze && pizze.size() > 0) {
+
+            /**
+             * Nomi
+             */
+            String listNomi = "";
+            for (String s : pizze.stream()
+                    .map(PastoDTO::getNome)
+                    .collect(Collectors.toList())) {
+
+                listNomi += NOME_PLACEHOLDER.replace("#NOME#", s);
+            }
+
+            /**
+             * Prezzo
+             */
+            String listPrezzi = "";
+            for (String s : pizze.stream()
+                    .map(PastoDTO::getPrezzo)
+                    .collect(Collectors.toList())) {
+
+                listPrezzi += PREZZO_PLACEHOLDER.replace("#PREZZO#", s);
+            }
+
+            mail = mail.replace(LIST_PIZZE_NOMI, listNomi);
+            mail = mail.replace(LIST_PIZZE_PREZZI, listPrezzi);
+        }
+
+        try {
+            String subject = "Menu del giorno da stampare";
+            mailService.sendMail(Arrays.asList("patriziopezzilli@gmail.com"), subject, mail);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
