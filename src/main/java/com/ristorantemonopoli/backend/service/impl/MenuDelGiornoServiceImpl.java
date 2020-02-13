@@ -14,8 +14,15 @@ import com.ristorantemonopoli.backend.service.SubscriberService;
 import com.ristorantemonopoli.backend.utils.TemplateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UncheckedIOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +31,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.ristorantemonopoli.backend.constants.InternalTemplateUtils.*;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 @Service
 public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
@@ -39,6 +47,17 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Autowired
     private MenuDelGiornoDataRepository menuDelGiornoDataRepository;
+
+    @Value("classpath:menudelgiorno.txt")
+    private Resource resource;
+
+    private String getMenuDelGirornoInternal() {
+        try (Reader reader = new InputStreamReader(resource.getInputStream(), UTF_8)) {
+            return FileCopyUtils.copyToString(reader);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
 
     @Override
     public List<PastoDTO> retrievePasti(String categoria) {
@@ -142,7 +161,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
     @Override
     public void inviaInStampa() {
-        String mail = (InternalTemplateUtils.MENU_DEL_GIORNO_INTERNAL);
+        String mail = getMenuDelGirornoInternal();
 
         List<PastoDTO> primi = retrievePasti("primo");
         List<PastoDTO> secondi = retrievePasti("secondo");
