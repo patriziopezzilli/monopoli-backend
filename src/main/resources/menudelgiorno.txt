@@ -97,7 +97,7 @@
      <v:shadow color="#ccc [4]"/>
      <v:path insetpenok="f"/>
      <v:textbox style='mso-column-margin:2mm' inset="2.88pt,2.88pt,2.88pt,2.88pt"/>
-    </v:shape><![endif]--><span style='position:absolute;z-index:1;
+    </v:shape><span style='position:absolute;z-index:1;
 left:0px;top:12px;width:384px;height:50px'>
 
 <table cellpadding=0 cellspacing=0>
