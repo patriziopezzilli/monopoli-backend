@@ -2,8 +2,7 @@
       xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-    <link rel=File-List href="menudelgiorno_file/filelist.xml">
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252" />
     <!--[if !mso]>
     <style>
         v\: * {
@@ -23,7 +22,6 @@
         }
     </style>
     <![endif]-->
-    <title>Titolo pagina</title>
     <style>
         <!--
         /* Definizione dei tipi di carattere */
