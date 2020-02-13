@@ -1,6 +1,9 @@
 package com.ristorantemonopoli.backend.service.impl;
 
-import com.ristorantemonopoli.backend.constants.InternalTemplateUtils;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiornoData;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoDataRepository;
@@ -13,16 +16,15 @@ import com.ristorantemonopoli.backend.service.MenuDelGiornoService;
 import com.ristorantemonopoli.backend.service.SubscriberService;
 import com.ristorantemonopoli.backend.utils.TemplateUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.net.ftp.FTP;
+import org.apache.commons.net.ftp.FTPClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UncheckedIOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,6 +58,55 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
             return FileCopyUtils.copyToString(reader);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
+        }
+    }
+
+    private static void convertAndUpload(String html)
+            throws DocumentException, FileNotFoundException, IOException, Exception {
+
+        Document document = new Document();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        PdfWriter writer = PdfWriter.getInstance(document, out);
+        document.open();
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document,
+                new ByteArrayInputStream(html.getBytes()));
+        document.close();
+
+
+        String server = "lhcp3004.webapps.net";
+        int port = 21;
+        String user = "n63o4crk";
+        String pass = "86h4n*8g%(*u";
+
+        FTPClient ftpClient = new FTPClient();
+        try {
+            ftpClient.connect(server, port);
+            ftpClient.login(user, pass);
+            ftpClient.enterLocalPassiveMode();
+
+            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+
+            String firstRemoteFile = "/public_html/menudelgiorno/generato/menudelgiorno.pdf";
+            InputStream inputStream = new ByteArrayInputStream(out.toByteArray());
+
+            System.out.println("Start uploading first file");
+            boolean done = ftpClient.storeFile(firstRemoteFile, inputStream);
+            inputStream.close();
+            if (done) {
+                System.out.println("The first file is uploaded successfully.");
+            }
+        } catch (IOException ex) {
+            System.out.println("Error: " + ex.getMessage());
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (ftpClient.isConnected()) {
+                    ftpClient.logout();
+                    ftpClient.disconnect();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
@@ -263,6 +314,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
         try {
             String subject = "Menu del giorno da stampare";
             mailService.sendMail(Arrays.asList("patriziopezzilli@gmail.com"), subject, mail);
+            convertAndUpload(mail);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
