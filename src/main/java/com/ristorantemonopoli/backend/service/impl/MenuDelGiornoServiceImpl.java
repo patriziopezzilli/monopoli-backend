@@ -1,5 +1,8 @@
 package com.ristorantemonopoli.backend.service.impl;
 
+import com.convertapi.client.Config;
+import com.convertapi.client.ConvertApi;
+import com.convertapi.client.Param;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -15,6 +18,7 @@ import com.ristorantemonopoli.backend.service.MailService;
 import com.ristorantemonopoli.backend.service.MenuDelGiornoService;
 import com.ristorantemonopoli.backend.service.SubscriberService;
 import com.ristorantemonopoli.backend.utils.TemplateUtils;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
@@ -25,6 +29,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,14 +69,18 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
     private static void convertAndUpload(String html)
             throws DocumentException, FileNotFoundException, IOException, Exception {
 
-        Document document = new Document();
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        PdfWriter writer = PdfWriter.getInstance(document, out);
-        document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document,
-                new ByteArrayInputStream(html.getBytes()));
-        document.close();
+        File newHtmlFile = new File("/path/new.html");
+        FileUtils.writeStringToFile(newHtmlFile, html);
+        Config.setDefaultSecret("vx93TPacwsALlF4E");
+        ConvertApi.convert("html", "pdf",
+                new Param("File", Paths.get("/path/new.html"))
+        ).get().saveFilesSync(Paths.get("/path/to/result/dir"));
 
+        System.out.println("> saved pdf file");
+        FileInputStream is = new FileInputStream("/path/to/result/dir/new.pdf");
+
+        System.out.println("> get input stream..");
+        System.out.println("> upload ftp..");
 
         String server = "lhcp3004.webapps.net";
         int port = 21;
@@ -87,11 +96,10 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
 
             String firstRemoteFile = "/public_html/menudelgiorno/generato/menudelgiorno.pdf";
-            InputStream inputStream = new ByteArrayInputStream(out.toByteArray());
 
             System.out.println("Start uploading first file");
-            boolean done = ftpClient.storeFile(firstRemoteFile, inputStream);
-            inputStream.close();
+            boolean done = ftpClient.storeFile(firstRemoteFile, is);
+            is.close();
             if (done) {
                 System.out.println("The first file is uploaded successfully.");
             }
