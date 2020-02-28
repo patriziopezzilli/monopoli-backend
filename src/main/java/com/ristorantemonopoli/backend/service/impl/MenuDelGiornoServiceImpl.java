@@ -1,12 +1,5 @@
 package com.ristorantemonopoli.backend.service.impl;
 
-import com.convertapi.client.Config;
-import com.convertapi.client.ConvertApi;
-import com.convertapi.client.Param;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.tool.xml.XMLWorkerHelper;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiorno;
 import com.ristorantemonopoli.backend.database.entity.MenuDelGiornoData;
 import com.ristorantemonopoli.backend.database.repository.MenuDelGiornoDataRepository;
@@ -18,18 +11,17 @@ import com.ristorantemonopoli.backend.service.MailService;
 import com.ristorantemonopoli.backend.service.MenuDelGiornoService;
 import com.ristorantemonopoli.backend.service.SubscriberService;
 import com.ristorantemonopoli.backend.utils.TemplateUtils;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.net.ftp.FTP;
-import org.apache.commons.net.ftp.FTPClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;
 
-import java.io.*;
-import java.nio.file.Paths;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UncheckedIOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,58 +55,6 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
             return FileCopyUtils.copyToString(reader);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
-        }
-    }
-
-    private static void convertAndUpload(String html)
-            throws DocumentException, FileNotFoundException, IOException, Exception {
-
-        File newHtmlFile = new File("/path/new.html");
-        FileUtils.writeStringToFile(newHtmlFile, html);
-        Config.setDefaultSecret("vx93TPacwsALlF4E");
-        ConvertApi.convert("html", "pdf",
-                new Param("File", Paths.get("/path/new.html"))
-        ).get().saveFilesSync(Paths.get("/path/to/result/dir"));
-
-        System.out.println("> saved pdf file");
-        FileInputStream is = new FileInputStream("/path/to/result/dir/new.pdf");
-
-        System.out.println("> get input stream..");
-        System.out.println("> upload ftp..");
-
-        String server = "lhcp3004.webapps.net";
-        int port = 21;
-        String user = "n63o4crk";
-        String pass = "86h4n*8g%(*u";
-
-        FTPClient ftpClient = new FTPClient();
-        try {
-            ftpClient.connect(server, port);
-            ftpClient.login(user, pass);
-            ftpClient.enterLocalPassiveMode();
-
-            ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
-
-            String firstRemoteFile = "/public_html/menudelgiorno/generato/menudelgiorno.pdf";
-
-            System.out.println("Start uploading first file");
-            boolean done = ftpClient.storeFile(firstRemoteFile, is);
-            is.close();
-            if (done) {
-                System.out.println("The first file is uploaded successfully.");
-            }
-        } catch (IOException ex) {
-            System.out.println("Error: " + ex.getMessage());
-            ex.printStackTrace();
-        } finally {
-            try {
-                if (ftpClient.isConnected()) {
-                    ftpClient.logout();
-                    ftpClient.disconnect();
-                }
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
         }
     }
 
@@ -321,8 +261,7 @@ public class MenuDelGiornoServiceImpl implements MenuDelGiornoService {
 
         try {
             String subject = "Menu del giorno da stampare";
-            mailService.sendMail(Arrays.asList("patriziopezzilli@gmail.com"), subject, mail);
-            convertAndUpload(mail);
+            mailService.sendMailWithAttachment(Arrays.asList("patriziopezzilli@gmail.com"), subject, mail, mail);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
