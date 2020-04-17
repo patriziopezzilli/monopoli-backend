@@ -94,10 +94,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String token = Jwts.builder()
                 .signWith(SignatureAlgorithm.HS512, SECRET)
                 .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
-                .claim("id", "0")
+                .claim("id", "99")
                 .claim("email", ((User) auth.getPrincipal()).getUsername())
                 .claim("firstName", userName)
-                .claim("lastName", "")
+                .claim("lastName", ThreadState.INSTANCE.getMerchant())
                 .claim("merchant", ThreadState.INSTANCE.getMerchant())
                 .claim("roles", roles)
                 .compact();
