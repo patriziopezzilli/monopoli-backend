@@ -5,12 +5,16 @@ import com.bee.content.backend.service.SubscriberService;
 import com.bee.content.backend.service.VisitorService;
 import com.bee.content.backend.utils.ThreadState;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.bee.content.backend.utils.MerchantUtils.MERCHANT_HEADER_KEY;
+import static com.bee.content.backend.utils.MerchantUtils.validateMerchant;
 
 @RestController
 public class UtilityController {
@@ -22,7 +26,9 @@ public class UtilityController {
     private SubscriberService subscriberService;
 
     @RequestMapping(value = "/progress", method = RequestMethod.GET)
-    public List<ProgressDTO> login() {
+    public List<ProgressDTO> systemOverview(@RequestHeader(MERCHANT_HEADER_KEY) String merchant) {
+        validateMerchant(merchant);
+
         List<ProgressDTO> progressDTOS = new ArrayList<>();
 
         ProgressDTO visitatori = new ProgressDTO();
