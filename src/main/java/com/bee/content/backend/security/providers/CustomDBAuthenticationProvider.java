@@ -47,6 +47,7 @@ public class CustomDBAuthenticationProvider implements AuthenticationProvider {
                 userEntity.getRoles().forEach(roles::add);
                 appUser.setMerchant(userEntity.getMerchant());
 
+                System.out.println("> set merchant from user entity " + appUser.getMerchant());
                 ThreadState.INSTANCE.setMerchant(appUser.getMerchant());
             }
 
