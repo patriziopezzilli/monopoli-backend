@@ -50,7 +50,7 @@ public class UtilityController {
         visitatori.setDescription("");
 
         ProgressDTO menuDelGiornoSubscriber = new ProgressDTO();
-        menuDelGiornoSubscriber.setTitle("");
+        menuDelGiornoSubscriber.setTitle("Registrati alla newsletter");
         menuDelGiornoSubscriber.setValue(subscriberService.countMenuSubscriber(ThreadState.INSTANCE.getMerchant()));
 
         Integer activeProgress2 = 0;
