@@ -43,6 +43,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserService userService, MerchantService merchantService) {
         this.authenticationManager = authenticationManager;
         this.userService = userService;
+        this.merchantService = merchantService;
     }
 
     @Override
