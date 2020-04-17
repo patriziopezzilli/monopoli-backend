@@ -37,6 +37,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username, String merchant) {
+        if (null == merchant) {
+            return userRepository.findByUsername(username);
+        }
+
         return userRepository.findByUsernameAndMerchant(username, merchant);
     }
 

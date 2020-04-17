@@ -7,4 +7,5 @@ import com.bee.content.backend.database.entity.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUsernameAndMerchant(String username, String merchant);
+    User findByUsername(String username);
 }

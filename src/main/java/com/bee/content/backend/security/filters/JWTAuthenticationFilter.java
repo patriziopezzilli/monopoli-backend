@@ -83,15 +83,18 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String userName = ((User) auth.getPrincipal()).getUsername();
         loggedInUser.setEmail(userName);
         loggedInUser.setRoles(roles);
+
+        com.bee.content.backend.database.entity.User user = userService.findByUsername(userName, null);
+
         System.out.println("Merchant " + ThreadState.INSTANCE.getMerchant());
         String token = Jwts.builder()
                 .signWith(SignatureAlgorithm.HS512, SECRET)
                 .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000))
-                .claim("id", "99")
+                .claim("id", user.getId())
                 .claim("email", ((User) auth.getPrincipal()).getUsername())
-                .claim("firstName", userName)
-                .claim("lastName", ThreadState.INSTANCE.getMerchant())
-                .claim("merchant", ThreadState.INSTANCE.getMerchant())
+                .claim("firstName", user.getFirstName())
+                .claim("lastName", user.getLastName())
+                .claim("merchant", user.getMerchant())
                 .claim("roles", roles)
                 .compact();
 
