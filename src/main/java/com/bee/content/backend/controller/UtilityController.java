@@ -47,10 +47,10 @@ public class UtilityController {
         }
         visitatori.setActiveProgress(activeProgress);
 
-        visitatori.setDescription("Visite effettuate su www.ristorantemonopoli.com");
+        visitatori.setDescription("");
 
         ProgressDTO menuDelGiornoSubscriber = new ProgressDTO();
-        menuDelGiornoSubscriber.setTitle("Registrati al Menù del Giorno");
+        menuDelGiornoSubscriber.setTitle("");
         menuDelGiornoSubscriber.setValue(subscriberService.countMenuSubscriber(ThreadState.INSTANCE.getMerchant()));
 
         Integer activeProgress2 = 0;
@@ -65,27 +65,11 @@ public class UtilityController {
         }
         menuDelGiornoSubscriber.setActiveProgress(activeProgress2);
 
-        menuDelGiornoSubscriber.setDescription("Registrati alla newsletter del menù del giorno");
+        menuDelGiornoSubscriber.setDescription("");
 
-        ProgressDTO courtesySubscriber = new ProgressDTO();
-        courtesySubscriber.setTitle("Registrati di Cortesia");
-        courtesySubscriber.setValue(subscriberService.countCourtesySubscriber(ThreadState.INSTANCE.getMerchant()));
 
-        Integer activeProgress3 = 0;
-        if (courtesySubscriber.getValue() > 0 && courtesySubscriber.getValue() <= 100) {
-            activeProgress3 = ((courtesySubscriber.getValue() * 100) / 100);
-        } else if (courtesySubscriber.getValue() > 100 && courtesySubscriber.getValue() <= 1000) {
-            activeProgress3 = ((courtesySubscriber.getValue() * 100) / 1000);
-        } else if (courtesySubscriber.getValue() > 1000 && courtesySubscriber.getValue() <= 10000) {
-            activeProgress3 = ((courtesySubscriber.getValue() * 100) / 10000);
-        } else {
-            activeProgress3 = 100;
-        }
-        courtesySubscriber.setActiveProgress(activeProgress3);
-        courtesySubscriber.setDescription("Registrati alla pagina di cortesia su www.ristorantemonopoli.com");
         progressDTOS.add(visitatori);
         progressDTOS.add(menuDelGiornoSubscriber);
-        progressDTOS.add(courtesySubscriber);
 
         return progressDTOS;
     }

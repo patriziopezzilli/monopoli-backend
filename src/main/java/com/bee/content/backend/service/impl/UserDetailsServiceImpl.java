@@ -1,5 +1,6 @@
 package com.bee.content.backend.service.impl;
 
+import com.bee.content.backend.utils.ThreadState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsernameAndMerchant(username, "MONOPOLI");
+        User user = userRepository.findByUsernameAndMerchant(username, ThreadState.INSTANCE.getMerchant());
 	        if (null != user) {
 		        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
 		        for (Role role : user.getRoles()) {
