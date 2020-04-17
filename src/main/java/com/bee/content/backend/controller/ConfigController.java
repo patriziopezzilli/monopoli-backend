@@ -16,12 +16,12 @@ public class ConfigController {
     private ConfigService configService;
 
     @RequestMapping(value = "/config/description", method = RequestMethod.POST)
-    public void saveDescrizione(@RequestBody ConfigDTO request) {
+    public void saveDescription(@RequestBody ConfigDTO request) {
         configService.insertDescription(request, ThreadState.INSTANCE.getMerchant());
     }
 
     @RequestMapping(value = "/config/description", method = RequestMethod.GET)
-    public ConfigDTO getDescrizione() {
+    public ConfigDTO getDescription() {
         return configService.retrieveDescription(ThreadState.INSTANCE.getMerchant());
     }
 }

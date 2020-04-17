@@ -29,6 +29,10 @@ public class ApplicationUser {
     @JsonProperty("lastName")
     @JsonInclude( JsonInclude.Include.NON_NULL)
     private String lastName;
+
+	@JsonProperty("merchant")
+	@JsonInclude( JsonInclude.Include.NON_NULL)
+	private String merchant;
     
 	public String getFirstName() {
 		return firstName;
@@ -55,9 +59,16 @@ public class ApplicationUser {
 	}
 	@JsonProperty("roles")
     private List<String> roles;
-    
-    
-    public List<String> getRoles() {
+
+	public String getMerchant() {
+		return merchant;
+	}
+
+	public void setMerchant(String merchant) {
+		this.merchant = merchant;
+	}
+
+	public List<String> getRoles() {
 		return roles;
 	}
 
