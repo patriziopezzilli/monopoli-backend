@@ -3,6 +3,7 @@ package com.bee.content.backend.config;
 import com.bee.content.backend.constants.SecurityConstants;
 import com.bee.content.backend.security.filters.JWTAuthenticationFilter;
 import com.bee.content.backend.security.filters.JWTAuthorizationFilter;
+import com.bee.content.backend.service.MerchantService;
 import com.bee.content.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
@@ -33,9 +34,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private MerchantService merchantService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        JWTAuthenticationFilter authenticationFilter = new JWTAuthenticationFilter(authenticationManager(), userService);
+        JWTAuthenticationFilter authenticationFilter = new JWTAuthenticationFilter(authenticationManager(), userService, merchantService);
         authenticationFilter.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher(SecurityConstants.LOGIN_URL));
         http.csrf().disable().cors().and().authorizeRequests().requestMatchers(EndpointRequest.toAnyEndpoint())
                 .permitAll().antMatchers(HttpMethod.GET, "/health")

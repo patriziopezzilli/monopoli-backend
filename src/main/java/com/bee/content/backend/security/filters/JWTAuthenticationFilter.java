@@ -1,6 +1,8 @@
 package com.bee.content.backend.security.filters;
 
+import com.bee.content.backend.database.entity.MerchantEntity;
 import com.bee.content.backend.dto.ApplicationUser;
+import com.bee.content.backend.service.MerchantService;
 import com.bee.content.backend.service.UserService;
 import com.bee.content.backend.utils.ThreadState;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,10 +37,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     Logger logger = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
 
     private UserService userService;
-
+    private MerchantService merchantService;
     private AuthenticationManager authenticationManager;
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserService userService) {
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserService userService, MerchantService merchantService) {
         this.authenticationManager = authenticationManager;
         this.userService = userService;
     }
@@ -86,6 +88,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         loggedInUser.setRoles(roles);
 
         com.bee.content.backend.database.entity.User user = userService.findByUsername(userName, null);
+        MerchantEntity merchantEntity = merchantService.retrieveMerchant(user.getMerchant());
 
         System.out.println("Merchant " + ThreadState.INSTANCE.getMerchant());
         String token = Jwts.builder()
@@ -96,6 +99,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .claim("firstName", user.getFirstName())
                 .claim("lastName", user.getLastName())
                 .claim("merchant", user.getMerchant())
+                .claim("merchantTitle", merchantEntity.getName())
                 .claim("roles", roles)
                 .compact();
 
