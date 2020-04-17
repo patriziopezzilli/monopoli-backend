@@ -7,7 +7,9 @@ logging:
 
 spring:
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   servlet:
     multipart:
       enabled: true
@@ -19,11 +21,11 @@ spring:
     username: n63o4crk_guest
     password: patriziopezzilli
     driverClassName: com.mysql.cj.jdbc.Driver
-  
+
 server:
   port: 8888
-  servlet :
-    context-path :  /monopoli-be/api
+  servlet:
+    context-path:  /bee-content/api
 
 management:
   server:
