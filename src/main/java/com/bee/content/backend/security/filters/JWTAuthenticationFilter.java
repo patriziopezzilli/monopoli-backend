@@ -19,6 +19,7 @@ import java.util.Date;
 
 import com.bee.content.backend.service.UserService;
 import com.bee.content.backend.dto.ApplicationUser;
+import com.bee.content.backend.utils.ThreadState;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,6 +98,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .claim("email", ((User) auth.getPrincipal()).getUsername())
                 .claim("firstName", userName)
                 .claim("lastName", "")
+                .claim("merchant", ThreadState.INSTANCE.getMerchant())
                 .claim("roles", roles)
                 .compact();
         
