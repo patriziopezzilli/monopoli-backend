@@ -29,19 +29,18 @@ import java.util.*;
 
 import static com.bee.content.backend.constants.SecurityConstants.*;
 
-@Component
+
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     Logger logger = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
 
-    @Autowired
     private UserService userService;
 
     private AuthenticationManager authenticationManager;
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserService userService) {
         this.authenticationManager = authenticationManager;
-
+        this.userService = userService;
     }
 
     @Override
