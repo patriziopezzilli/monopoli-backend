@@ -28,7 +28,7 @@ public class ChatServiceImpl implements ChatService {
         List<ChatMessage> messages = chatRepository.findByFromOrAndTo(email, email);
         if(null != messages) {
             messages.forEach(c -> {
-                String dataStr = formatter.format(c.getCreation_date());
+                String dataStr = formatter.format(new Date());
                 String from = SUPPORT_NAME.equalsIgnoreCase(c.getFrom()) ? SUPPORT_NAME : "You";
 
                 response.add(
@@ -48,11 +48,9 @@ public class ChatServiceImpl implements ChatService {
     public void sendMessageToSupport(String author, String content) {
         ChatMessage message = new ChatMessage();
 
-        message.setCreation_date(new Date());
         message.setFrom(author);
         message.setTo(SUPPORT_NAME);
         message.setMessage(content);
-        message.setVisible(true);
         message.setMerchant(ThreadState.INSTANCE.getMerchant());
 
         chatRepository.save(

@@ -14,10 +14,8 @@ public class ChatMessage {
 
     private String from;
     private String to;
-    private Date creation_date;
     private String message;
     private String merchant;
-    private Boolean visible;
 
     public ChatMessage() {
 
@@ -47,14 +45,6 @@ public class ChatMessage {
         this.to = to;
     }
 
-    public Date getCreation_date() {
-        return creation_date;
-    }
-
-    public void setCreation_date(Date creation_date) {
-        this.creation_date = creation_date;
-    }
-
     public String getMessage() {
         return message;
     }
@@ -69,13 +59,5 @@ public class ChatMessage {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Boolean getVisible() {
-        return visible;
-    }
-
-    public void setVisible(Boolean visible) {
-        this.visible = visible;
     }
 }
