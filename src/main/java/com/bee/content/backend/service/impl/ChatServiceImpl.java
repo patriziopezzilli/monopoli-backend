@@ -29,7 +29,7 @@ public class ChatServiceImpl implements ChatService {
         if(null != messages) {
             messages.forEach(c -> {
                 String dataStr = formatter.format(new Date());
-                String from = SUPPORT_NAME.equalsIgnoreCase(c.getFrom()) ? SUPPORT_NAME : "You";
+                String from = SUPPORT_NAME.equalsIgnoreCase(c.getAuthor()) ? SUPPORT_NAME : "You";
 
                 response.add(
                         new ChatMessageDTO(
@@ -48,8 +48,8 @@ public class ChatServiceImpl implements ChatService {
     public void sendMessageToSupport(String author, String content) {
         ChatMessage message = new ChatMessage();
 
-        message.setFrom(author);
-        message.setTo(SUPPORT_NAME);
+        message.setAuthor(author);
+        message.setRecipient(SUPPORT_NAME);
         message.setMessage(content);
         message.setMerchant(ThreadState.INSTANCE.getMerchant());
 

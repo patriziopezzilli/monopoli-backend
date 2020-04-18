@@ -11,8 +11,8 @@ public class ChatMessage {
     @Basic(optional = false)
     private Long id;
 
-    private String from;
-    private String to;
+    private String author;
+    private String recipient;
     private String message;
     private String merchant;
 
@@ -28,20 +28,20 @@ public class ChatMessage {
         this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setAuthor(String from) {
+        this.author = from;
     }
 
-    public String getTo() {
-        return to;
+    public String getRecipient() {
+        return recipient;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setRecipient(String to) {
+        this.recipient = to;
     }
 
     public String getMessage() {
@@ -64,8 +64,8 @@ public class ChatMessage {
     public String toString() {
         final StringBuilder sb = new StringBuilder("ChatMessage{");
         sb.append("id=").append(id);
-        sb.append(", from='").append(from).append('\'');
-        sb.append(", to='").append(to).append('\'');
+        sb.append(", from='").append(author).append('\'');
+        sb.append(", to='").append(recipient).append('\'');
         sb.append(", message='").append(message).append('\'');
         sb.append(", merchant='").append(merchant).append('\'');
         sb.append('}');
