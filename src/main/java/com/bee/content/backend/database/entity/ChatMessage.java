@@ -60,4 +60,16 @@ public class ChatMessage {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ChatMessage{");
+        sb.append("id=").append(id);
+        sb.append(", from='").append(from).append('\'');
+        sb.append(", to='").append(to).append('\'');
+        sb.append(", message='").append(message).append('\'');
+        sb.append(", merchant='").append(merchant).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

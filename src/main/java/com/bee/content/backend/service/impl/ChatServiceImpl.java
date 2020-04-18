@@ -53,6 +53,7 @@ public class ChatServiceImpl implements ChatService {
         message.setMessage(content);
         message.setMerchant(ThreadState.INSTANCE.getMerchant());
 
+        System.out.println("> save message " + message);
         chatRepository.save(
                 message
         );
