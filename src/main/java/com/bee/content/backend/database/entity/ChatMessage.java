@@ -1,7 +1,6 @@
 package com.bee.content.backend.database.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "chat_messages")
