@@ -4,10 +4,7 @@ import com.bee.content.backend.dto.ChatMessageDTO;
 import com.bee.content.backend.dto.ChatMessageMessageRequestDTO;
 import com.bee.content.backend.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,7 @@ public class ChatController {
     private ChatService chatService;
 
     @RequestMapping(value = "/chat/messages", method = RequestMethod.GET)
-    public List<ChatMessageDTO> getMessages(String email) {
+    public List<ChatMessageDTO> getMessages(@RequestParam String email) {
         return chatService.retrieveChatMessage(email);
     }
 
