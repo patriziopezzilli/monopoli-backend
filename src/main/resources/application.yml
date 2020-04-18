@@ -2,7 +2,7 @@ logging:
   level:
     root: INFO
     org.springframework.web: INFO
-    org.hibernate: DEBUG
+    org.hibernate: ERROR
     org.apache.commons.beanutils: ERROR
 
 spring:
