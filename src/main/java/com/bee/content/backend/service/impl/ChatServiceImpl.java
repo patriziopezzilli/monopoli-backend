@@ -25,7 +25,7 @@ public class ChatServiceImpl implements ChatService {
     public List<ChatMessageDTO> retrieveChatMessage(String email) {
         List<ChatMessageDTO> response = new ArrayList<>();
 
-        List<ChatMessage> messages = chatRepository.findByFromOrAndTo(email, email);
+        List<ChatMessage> messages = chatRepository.findByAuthorOrRecipient(email, email);
         if(null != messages) {
             messages.forEach(c -> {
                 String dataStr = formatter.format(new Date());

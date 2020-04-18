@@ -10,6 +10,6 @@ public interface ChatRepository extends JpaRepository<ChatMessage, Long>{
 
     Integer countByMerchant(String merchant);
 
-    List<ChatMessage> findByAuthorOrRecipient(String from, String to);
+    List<ChatMessage> findByAuthorOrRecipient(String author, String recipient);
 }
 
