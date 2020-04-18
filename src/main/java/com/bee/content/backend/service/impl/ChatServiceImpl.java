@@ -51,7 +51,6 @@ public class ChatServiceImpl implements ChatService {
         message.setFrom(author);
         message.setTo(SUPPORT_NAME);
         message.setMessage(content);
-        message.setMerchant(ThreadState.INSTANCE.getMerchant());
 
         System.out.println("> save message " + message);
         chatRepository.save(
