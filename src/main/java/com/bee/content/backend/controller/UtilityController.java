@@ -67,9 +67,16 @@ public class UtilityController {
 
         menuDelGiornoSubscriber.setDescription("");
 
+        ProgressDTO booking = new ProgressDTO();
+        booking.setTitle("Prenotazioni per oggi");
+        booking.setValue(0);
+        booking.setActiveProgress(0);
+        booking.setDescription("");
+
 
         progressDTOS.add(visitatori);
         progressDTOS.add(menuDelGiornoSubscriber);
+        progressDTOS.add(booking);
 
         return progressDTOS;
     }
