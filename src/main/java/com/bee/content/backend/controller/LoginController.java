@@ -22,9 +22,6 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class LoginController {
 
-    @Autowired
-    private UserService userService;
-
     @RequestMapping(value = "/auth/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public LoginDTO login(User user, HttpServletResponse response) {
         String jwtToken = response.getHeader(SecurityConstants.HEADER_STRING);

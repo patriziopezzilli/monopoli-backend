@@ -24,7 +24,7 @@ public class CustomDBAuthenticationProvider implements AuthenticationProvider {
     private Logger logger = LoggerFactory.getLogger(CustomDBAuthenticationProvider.class);
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @Override
     @Transactional
@@ -38,7 +38,6 @@ public class CustomDBAuthenticationProvider implements AuthenticationProvider {
 
         if (authenticate(username, password)) {
             ApplicationUser appUser = new ApplicationUser();
-            logger.debug("Going to fetch roles from DB as a part of successful authentication");
             com.bee.content.backend.database.entity.User userEntity = userService.findByUsername(username, ThreadState.INSTANCE.getMerchant());
 
             if (null != userEntity) {
