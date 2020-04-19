@@ -23,6 +23,7 @@ public class MerchantEntity {
     private String mail;
     private String phone_number;
     private Boolean active;
+    private String url;
 
     public MerchantEntity() {
 
@@ -130,5 +131,13 @@ public class MerchantEntity {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
