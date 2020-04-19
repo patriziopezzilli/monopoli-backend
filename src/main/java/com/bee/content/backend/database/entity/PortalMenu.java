@@ -15,7 +15,6 @@ public class PortalMenu {
     private String link;
     private String icon;
     private Integer order;
-
     private String plan;
 
     public PortalMenu() {
