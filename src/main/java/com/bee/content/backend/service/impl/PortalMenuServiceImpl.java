@@ -24,7 +24,7 @@ public class PortalMenuServiceImpl implements PortalMenuService {
     @Override
     public List<PortalMenuDTO> retrievePortalMenu() {
         List<PortalMenuDTO> response = new ArrayList<>();
-        List<PortalMenu> menus = portalMenuRepository.findByPlanOrderByOrder(
+        List<PortalMenu> menus = portalMenuRepository.findByPlanOrderByPriority(
                 merchantRepository.getByCode(ThreadState.INSTANCE.getMerchant()).getPlan()
         );
 
