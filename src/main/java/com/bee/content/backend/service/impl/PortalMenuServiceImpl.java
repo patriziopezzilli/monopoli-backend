@@ -36,7 +36,7 @@ public class PortalMenuServiceImpl implements PortalMenuService {
                         c.getIcon());
 
                 List<PortalMenu> menuList = portalMenuRepository.findByParentOrderByPriority(c.getId().intValue());
-                if (null != menuList) {
+                if (null != menuList && !menuList.isEmpty()) {
                     dto.setChildren(new ArrayList<>());
                     menuList.forEach(t -> {
                         dto.getChildren().add(
