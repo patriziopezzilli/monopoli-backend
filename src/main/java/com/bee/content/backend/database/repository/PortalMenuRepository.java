@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface PortalMenuRepository extends JpaRepository<PortalMenu, Long>{
 
-    List<PortalMenu> findByPlanOrderByOrder(String plan);
+    List<PortalMenu> findByPlanOrderByPriority(String plan);
 
 }
 

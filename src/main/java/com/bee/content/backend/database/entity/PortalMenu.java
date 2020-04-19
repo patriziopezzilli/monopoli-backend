@@ -14,7 +14,7 @@ public class PortalMenu {
     private String title;
     private String link;
     private String icon;
-    private Integer order;
+    private Integer priority;
     private String plan;
 
     public PortalMenu() {
@@ -60,11 +60,11 @@ public class PortalMenu {
         this.plan = plan;
     }
 
-    public Integer getOrder() {
-        return order;
+    public Integer getPriority() {
+        return priority;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
+    public void setPriority(Integer order) {
+        this.priority = order;
     }
 }
