@@ -24,18 +24,31 @@ public class PortalMenuServiceImpl implements PortalMenuService {
     @Override
     public List<PortalMenuDTO> retrievePortalMenu() {
         List<PortalMenuDTO> response = new ArrayList<>();
-        List<PortalMenu> menus = portalMenuRepository.findByPlanOrderByPriority(
+        List<PortalMenu> menus = portalMenuRepository.findByPlanAndParentNullOrderByPriority(
                 merchantRepository.getByCode(ThreadState.INSTANCE.getMerchant()).getPlan()
         );
 
         if (null != menus) {
             menus.forEach(c -> {
+                PortalMenuDTO dto = new PortalMenuDTO(
+                        c.getTitle(),
+                        c.getLink(),
+                        c.getIcon());
+
+                List<PortalMenu> menuList = portalMenuRepository.findByParentOrderByPriority(c.getId());
+                if (null != menuList) {
+                    dto.setChildren(new ArrayList<>());
+                    menuList.forEach(t -> {
+                        dto.getChildren().add(
+                                new PortalMenuDTO(
+                                        t.getTitle(),
+                                        t.getLink(),
+                                        t.getIcon())
+                        );
+                    });
+                }
                 response.add(
-                        new PortalMenuDTO(
-                                c.getTitle(),
-                                c.getLink(),
-                                c.getIcon()
-                        )
+                        dto
                 );
             });
         }
