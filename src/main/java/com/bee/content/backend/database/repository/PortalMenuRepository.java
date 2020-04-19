@@ -10,7 +10,7 @@ public interface PortalMenuRepository extends JpaRepository<PortalMenu, Long>{
 
     List<PortalMenu> findByPlanAndParentNullOrderByPriority(String plan);
 
-    List<PortalMenu> findByParentOrderByPriority(Long parent);
+    List<PortalMenu> findByParentOrderByPriority(Integer parent);
 
 }
 
