@@ -38,9 +38,12 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         String header = req.getHeader(SecurityConstants.HEADER_STRING);
 
         if (header == null || !header.startsWith(SecurityConstants.TOKEN_PREFIX)) {
+            System.out.println("> header auth null");
             chain.doFilter(req, res);
             return;
         }
+
+        System.out.println("> get auth");
         UsernamePasswordAuthenticationToken authentication = getAuthentication(req);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         chain.doFilter(req, res);

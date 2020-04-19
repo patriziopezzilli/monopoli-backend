@@ -39,6 +39,7 @@ public class CustomDBAuthenticationProvider implements AuthenticationProvider {
         if (authenticate(username, password)) {
             ApplicationUser appUser = new ApplicationUser();
             com.bee.content.backend.database.entity.User userEntity = userService.findByUsername(username, ThreadState.INSTANCE.getMerchant());
+            System.out.println("> found user " + userEntity);
 
             if (null != userEntity) {
                 appUser.setFirstName(userEntity.getUsername());
