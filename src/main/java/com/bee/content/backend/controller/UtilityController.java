@@ -1,5 +1,6 @@
 package com.bee.content.backend.controller;
 
+import com.bee.content.backend.database.repository.MerchantRepository;
 import com.bee.content.backend.dto.ProgressDTO;
 import com.bee.content.backend.service.SubscriberService;
 import com.bee.content.backend.service.VisitorService;
@@ -24,6 +25,9 @@ public class UtilityController {
 
     @Autowired
     private SubscriberService subscriberService;
+
+    @Autowired
+    private MerchantRepository merchantRepository;
 
     @RequestMapping(value = "/progress", method = RequestMethod.GET)
     public List<ProgressDTO> systemOverview(@RequestHeader(MERCHANT_HEADER_KEY) String merchant) {
@@ -73,8 +77,9 @@ public class UtilityController {
         booking.setActiveProgress(0);
         booking.setDescription("Bee Advanced");
 
-
-        progressDTOS.add(booking);
+        if(!merchantRepository.getByCode(merchant).getPlan().equalsIgnoreCase("MONOPOLI")) {
+            progressDTOS.add(booking);
+        }
 
         progressDTOS.add(visitatori);
         progressDTOS.add(menuDelGiornoSubscriber);
