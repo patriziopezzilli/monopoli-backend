@@ -38,9 +38,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username, String merchant) {
         if (null == merchant) {
+            System.out.println("> find by username without merchant");
             return userRepository.findByUsername(username);
         }
 
+        System.out.println("> find by username with merchant");
         return userRepository.findByUsernameAndMerchant(username, merchant);
     }
 

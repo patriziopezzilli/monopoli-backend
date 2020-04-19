@@ -73,9 +73,12 @@ public class CustomDBAuthenticationProvider implements AuthenticationProvider {
     private boolean authenticate(String username, String encodedPasswordFromUI) {
 
         com.bee.content.backend.database.entity.User userEntity = userService.findByUsername(username, ThreadState.INSTANCE.getMerchant());
+        System.out.println("> found user " + userEntity);
         if (null != userEntity && userEntity.getPassword().equals(encodedPasswordFromUI)) {
+            System.out.println("> PASSWORD ok");
             return true;
         } else {
+            System.out.println("> PASSWORD wrong");
             return false;
         }
 
