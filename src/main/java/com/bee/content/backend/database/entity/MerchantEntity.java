@@ -24,9 +24,18 @@ public class MerchantEntity {
     private String phone_number;
     private Boolean active;
     private String url;
+    private String plan;
 
     public MerchantEntity() {
 
+    }
+
+    public String getPlan() {
+        return plan;
+    }
+
+    public void setPlan(String plan) {
+        this.plan = plan;
     }
 
     public Long getId() {
