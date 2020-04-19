@@ -68,7 +68,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected CorsFilter crossFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(false);
+        config.setAllowCredentials(true);
         config.setAllowedHeaders(Collections.singletonList("*"));
         config.setAllowedOrigins(Collections.singletonList("*"));
         //config.setAllowedHeaders("*"); whitelist all sites
