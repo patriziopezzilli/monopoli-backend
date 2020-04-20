@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface PaymentRepository extends JpaRepository<Payment, Long>{
 
-    List<Payment> findByMerchantAndEmail(String merchant, String email);
+    List<Payment> findByMerchantAndEmailOrderByIdDesc(String merchant, String email);
 }
 

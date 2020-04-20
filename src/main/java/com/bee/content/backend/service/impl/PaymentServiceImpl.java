@@ -1,8 +1,9 @@
-package com.bee.content.backend.service;
+package com.bee.content.backend.service.impl;
 
 import com.bee.content.backend.database.entity.Payment;
 import com.bee.content.backend.database.repository.PaymentRepository;
 import com.bee.content.backend.dto.PaymentDTO;
+import com.bee.content.backend.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public List<PaymentDTO> retrievePayments(String email, String merchant) {
         List<PaymentDTO> response = new ArrayList<>();
-        List<Payment> payments = paymentRepository.findByMerchantAndEmail(merchant, email);
+        List<Payment> payments = paymentRepository.findByMerchantAndEmailOrderByIdDesc(merchant, email);
 
         // iterate over and populate
         if (null != payments) {
