@@ -25,6 +25,7 @@ public class MerchantEntity {
     private Boolean active;
     private String url;
     private String plan;
+    private String template;
 
     public MerchantEntity() {
 
@@ -148,5 +149,13 @@ public class MerchantEntity {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(String template) {
+        this.template = template;
     }
 }

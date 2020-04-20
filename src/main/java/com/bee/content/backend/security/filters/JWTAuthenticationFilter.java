@@ -104,6 +104,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .claim("merchantTitle", merchantEntity.getName())
                 .claim("merchantUrl", merchantEntity.getUrl())
                 .claim("merchantPlan", merchantEntity.getPlan())
+                .claim("template", merchantEntity.getTemplate())
                 .claim("roles", roles)
                 .compact();
 
