@@ -41,56 +41,81 @@ public class UtilityController {
 
         List<ProgressDTO> progressDTOS = new ArrayList<>();
 
-        ProgressDTO visitatori = new ProgressDTO();
-        visitatori.setTitle("Visitatori del Sito");
-        visitatori.setValue(service.countVisitors(ThreadState.INSTANCE.getMerchant()));
-
-        Integer activeProgress = 0;
-        if (visitatori.getValue() > 0 && visitatori.getValue() <= 100) {
-            activeProgress = ((visitatori.getValue() * 100) / 100);
-        } else if (visitatori.getValue() > 100 && visitatori.getValue() <= 1000) {
-            activeProgress = ((visitatori.getValue() * 100) / 1000);
-        } else if (visitatori.getValue() > 1000 && visitatori.getValue() <= 10000) {
-            activeProgress = ((visitatori.getValue() * 100) / 10000);
-        } else {
-            activeProgress = 100;
-        }
-        visitatori.setActiveProgress(activeProgress);
-
-        visitatori.setDescription("");
-
-        ProgressDTO menuDelGiornoSubscriber = new ProgressDTO();
-        menuDelGiornoSubscriber.setTitle("Registrati alla newsletter");
-        menuDelGiornoSubscriber.setValue(subscriberService.countMenuSubscriber(ThreadState.INSTANCE.getMerchant()));
-
-        Integer activeProgress2 = 0;
-        if (menuDelGiornoSubscriber.getValue() > 0 && menuDelGiornoSubscriber.getValue() <= 100) {
-            activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 100);
-        } else if (menuDelGiornoSubscriber.getValue() > 100 && menuDelGiornoSubscriber.getValue() <= 1000) {
-            activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 1000);
-        } else if (menuDelGiornoSubscriber.getValue() > 1000 && menuDelGiornoSubscriber.getValue() <= 10000) {
-            activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 10000);
-        } else {
-            activeProgress2 = 100;
-        }
-        menuDelGiornoSubscriber.setActiveProgress(activeProgress2);
-
-        menuDelGiornoSubscriber.setDescription("");
 
         MerchantEntity merchantEntity = merchantRepository.getByCode(merchant);
-        if (!merchantEntity.getPlan().equalsIgnoreCase("MONOPOLI")) {
+        if (!merchantEntity.getPlan().equalsIgnoreCase("FIDELITY")) {
+
+            ProgressDTO visitatori = new ProgressDTO();
+            visitatori.setTitle("Visitatori del Sito");
+            visitatori.setValue(service.countVisitors(ThreadState.INSTANCE.getMerchant()));
+
+            Integer activeProgress = 0;
+            if (visitatori.getValue() > 0 && visitatori.getValue() <= 100) {
+                activeProgress = ((visitatori.getValue() * 100) / 100);
+            } else if (visitatori.getValue() > 100 && visitatori.getValue() <= 1000) {
+                activeProgress = ((visitatori.getValue() * 100) / 1000);
+            } else if (visitatori.getValue() > 1000 && visitatori.getValue() <= 10000) {
+                activeProgress = ((visitatori.getValue() * 100) / 10000);
+            } else {
+                activeProgress = 100;
+            }
+            visitatori.setActiveProgress(activeProgress);
+
+            visitatori.setDescription("");
+
+            ProgressDTO menuDelGiornoSubscriber = new ProgressDTO();
+            menuDelGiornoSubscriber.setTitle("Registrati alla newsletter");
+            menuDelGiornoSubscriber.setValue(subscriberService.countMenuSubscriber(ThreadState.INSTANCE.getMerchant()));
+
+            Integer activeProgress2 = 0;
+            if (menuDelGiornoSubscriber.getValue() > 0 && menuDelGiornoSubscriber.getValue() <= 100) {
+                activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 100);
+            } else if (menuDelGiornoSubscriber.getValue() > 100 && menuDelGiornoSubscriber.getValue() <= 1000) {
+                activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 1000);
+            } else if (menuDelGiornoSubscriber.getValue() > 1000 && menuDelGiornoSubscriber.getValue() <= 10000) {
+                activeProgress2 = ((menuDelGiornoSubscriber.getValue() * 100) / 10000);
+            } else {
+                activeProgress2 = 100;
+            }
+            menuDelGiornoSubscriber.setActiveProgress(activeProgress2);
+
+            menuDelGiornoSubscriber.setDescription("");
+
+            if (!merchantEntity.getPlan().equalsIgnoreCase("MONOPOLI")) {
+                ProgressDTO booking = new ProgressDTO();
+                booking.setTitle("Piano attuale");
+                booking.setValue(0);
+                booking.setActiveProgress(0);
+
+                Plan plan = planRepository.findByCode(merchantEntity.getPlan());
+                booking.setDescription("Bee " + plan.getName());
+                progressDTOS.add(booking);
+            }
+
+            progressDTOS.add(visitatori);
+            progressDTOS.add(menuDelGiornoSubscriber);
+
+        } else {
             ProgressDTO booking = new ProgressDTO();
             booking.setTitle("Piano attuale");
             booking.setValue(0);
             booking.setActiveProgress(0);
-
-            Plan plan = planRepository.findByCode(merchantEntity.getPlan());
-            booking.setDescription("Bee " + plan.getName());
+            booking.setDescription("Bee Fidelity");
             progressDTOS.add(booking);
+
+            ProgressDTO carte = new ProgressDTO();
+            carte.setTitle("Carte attive");
+            carte.setValue(0);
+            carte.setActiveProgress(0);
+            progressDTOS.add(carte);
+
+            ProgressDTO transazioni = new ProgressDTO();
+            transazioni.setTitle("Transazioni");
+            transazioni.setValue(0);
+            transazioni.setActiveProgress(0);
+            progressDTOS.add(transazioni);
         }
 
-        progressDTOS.add(visitatori);
-        progressDTOS.add(menuDelGiornoSubscriber);
         return progressDTOS;
     }
 }
